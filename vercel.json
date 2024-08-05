@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    {
+      "source": "/subscribe",
+      "destination": "/subscribe.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/subscribe.html",
+      "destination": "/subscribe",
+      "permanent": true
+    }
+  ]
+}
