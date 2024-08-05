@@ -180,9 +180,9 @@ i:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.219);
 }
 
-.newsletter-image {
-    width: 100%; /* Full width for mobile devices */
-    height: 150px; /* Fixed height for the image */
+/*.newsletter-image {
+    width: 100%;  Full width for mobile devices 
+    height: 150px; Fixed height for the image 
     background-size: cover;
     background-position: center;
     flex-shrink: 0;
@@ -197,13 +197,13 @@ i:hover {
     bottom: 0;
     left: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, #EEECDE);
-}
+}*/
 
 .newsletter-text {
     flex-grow: 1;
     padding: 20px;
-    text-align: left;
-    font-size: 1.2em; /* Smaller font size for mobile devices */
+    text-align: center;
+    font-size: 1em; /* Smaller font size for mobile devices */
     color: #173B45;
     font-weight: 600;
 }
@@ -393,18 +393,19 @@ button:hover {
         flex-direction: row;
     }
 
-    .newsletter-image {
+    /*.newsletter-image {
         width: 100px;
         height: auto;
     }
 
     .newsletter-image::after {
         background: linear-gradient(to right, rgba(255, 255, 255, 0) 30%, #EEECDE);
-    }
+    }*/
 
     .newsletter-text {
         padding: 20px;
         font-size: 1.4em;
+        text-align: center;
     }
 
     .form-container {
@@ -471,15 +472,10 @@ button:hover {
         height: 100px; /* Reduced height for iPad Mini */
     }
 
-    .newsletter-container .newsletter-image::after {
-        background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, #EEECDE);
-        box-shadow: inset -11px 0 10px -3px #EEECDE; /* Blend the edge smoothly */
-    }
-
-    .newsletter-image {
-        width: 200px; /* Adjusted width for iPad Mini */
+    /*.newsletter-image {
+        width: 200px;  Adjusted width for iPad Mini 
         height: auto;
-    }
+    } */
 
     .newsletter-text {
         flex-grow: 1;
@@ -487,7 +483,7 @@ button:hover {
         align-items: center; /* Center the text vertically */
         justify-content: center; /* Center the text horizontally */
         padding: 10px;
-        font-size: 1.2em; /* Smaller font size for iPad Mini */
+        font-size: 1.6em; /* Smaller font size for iPad Mini */
         text-align: center;
     }
 
