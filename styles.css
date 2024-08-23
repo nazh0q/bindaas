@@ -1020,11 +1020,17 @@ footer {
 .section3 {
     height: 150vh; /* Adjust height to ensure content fits well */
   }
+  .right-text {
+    font-size: 19px;
+  }
 }
 
 @media screen and (max-height: 600px) {
   .section3 {
     height: 200vh;
+  }
+  .right-text {
+    font-size: 16px;
   }
 }
 
