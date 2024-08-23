@@ -1074,14 +1074,15 @@ footer {
     font-size: 18px;
   }
   
-  .section2 .parallax-wrapper {
-    margin-top: 40px; /* Adjust the space above the parallax effect */
+/*
+.section2 .parallax-wrapper {
+    margin-top: 40px; /* Adjust the space above the parallax effect 
 }
 
 .left-container .parallax {
-  background-size: 170%; /* Adjust background size to contain the image */
+  background-size: 170%; /* Adjust background size to contain the image 
   background-position: center;
-}
+}*/
 
 .section2 {
   padding-top: 10px; /* Further reduced padding at the top of section2 */
@@ -1264,14 +1265,15 @@ footer {
     bottom: 10px;
   }
 
-  .section2 .parallax-wrapper {
-    margin-top: 40px; /* Adjust the space above the parallax effect */
+/*
+.section2 .parallax-wrapper {
+    margin-top: 40px; /* Adjust the space above the parallax effect 
 }
 
 .left-container .parallax {
-  background-size: 170%; /* Adjust background size to contain the image */
+  background-size: 170%; /* Adjust background size to contain the image 
   background-position: center;
-}
+}*/
 
 .section3 {
   height: 100%;
