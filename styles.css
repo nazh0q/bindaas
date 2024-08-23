@@ -301,7 +301,7 @@ svg.active .svg-elem-10 {
 }
 
 .adj.slide-in {
-  left: ease 10px; /* Move it slightly to the right */
+  left: 10px; /* Move it slightly to the right */
   opacity: 1;
   animation-duration: 3s;
 }
@@ -315,7 +315,7 @@ svg.active .svg-elem-10 {
 }
 
 .description.slide-in {
-  top: ease 10px; /* Move it slightly down */
+  top: 10px; /* Move it slightly down */
   opacity: 1;
   animation-duration: 3s;
 }
@@ -1023,6 +1023,15 @@ footer {
   .right-text {
     font-size: 19px;
   }
+  .text-container {
+    font-size: 120px;
+  }
+  .adj {
+    font-size: 32px;
+  }
+  .description {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-height: 600px) {
@@ -1030,10 +1039,20 @@ footer {
     height: 200vh;
   }
   .right-text {
-    font-size: 16px;
+    font-size: 18px;
+    margin-top: 0;
   }
   .content--sticky {
     padding-bottom: 80px;
+}
+.text-container {
+  font-size: 120px;
+}
+.adj {
+  font-size: 32px;
+}
+.description {
+  font-size: 24px;
 }
 }
 
