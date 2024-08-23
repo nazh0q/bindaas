@@ -1,4 +1,4 @@
-
+import { preloadImages } from '/utils.js';
 
 // Selecting DOM elements
 
