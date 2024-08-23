@@ -1,8 +1,9 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/$1.html"
-      }
-    ]
-  }
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/(.*)/",
+      "destination": "/$1.html"
+    }
+  ]
+}
