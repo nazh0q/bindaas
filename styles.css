@@ -1442,7 +1442,7 @@ footer {
 }
 
 .left-container .parallax {
-  background-size: 100%; /* Adjust background size to contain the image */
+  background-size: 170%; /* Adjust background size to contain the image */
   background-position: center;
 }
 
