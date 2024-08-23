@@ -372,7 +372,7 @@ svg.active .svg-elem-10 {
 }
 
 .left-container .parallax {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/640px-PNG_transparency_demonstration_1.png');
+  background-image: url('img/lady.jpg');
   height: 100%;
   width: 100%;
   background-attachment: fixed;
@@ -1431,13 +1431,13 @@ footer {
   border-radius: 0;
 }
 
-/*.text-container {
-    margin-top: 5px; /* Reduce the top margin of the text container 
+.text-container {
+    margin-top: 5px; /* Reduce the top margin of the text container */
     font-size: 48px;
-    text-align: left; /* Align text to the left 
-    padding-left: 20px; /* Add padding to create space from the left edge 
-    padding-right: 20px; /* Optional: Add padding on the right for balance 
-}*/
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Add padding to create space from the left edge */
+    padding-right: 20px; /* Optional: Add padding on the right for balance */
+}
 
 /*
 .section2 .parallax-wrapper {
@@ -1448,11 +1448,6 @@ footer {
   background-size: 170%; /* Adjust background size to contain the image 
   background-position: center;
 }*/
-
-.parallax {
-  display: block !important; /* Force display to check if CSS is hiding the image */
-  visibility: visible !important; /* Force visibility */
-}
 
 .right-text {
     margin-top: 5px; /* Reduce the top margin of the right text */
