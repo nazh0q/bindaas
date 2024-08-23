@@ -1437,14 +1437,15 @@ footer {
     padding-right: 20px; /* Optional: Add padding on the right for balance */
 }
 
+/*
 .section2 .parallax-wrapper {
-    margin-top: 40px; /* Adjust the space above the parallax effect */
+    margin-top: 40px; /* Adjust the space above the parallax effect 
 }
 
 .left-container .parallax {
-  background-size: 170%; /* Adjust background size to contain the image */
+  background-size: 170%; /* Adjust background size to contain the image 
   background-position: center;
-}
+}*/
 
 .right-text {
     margin-top: 5px; /* Reduce the top margin of the right text */
