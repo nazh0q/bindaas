@@ -1,0 +1,509 @@
+@font-face {
+    font-family: "Garet Regular";
+    src: url("Garet Regular.ttf");
+}
+
+@font-face {
+    font-family: "Giflika-Regular";
+    src: url("Giflika-Regular.ttf");
+}
+
+@font-face {
+    font-family: "The Seasons Regular";
+    src: url("The Seasons Regular.ttf");
+}
+
+body {
+    font-family: "Garet Regular", sans-serif;
+    background-color: #522E38;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add some padding for better spacing on small screens */
+}
+
+body.subscribe-page {
+    opacity: 0; /* Initially hide the content */
+    transition: opacity 0.5s ease-in; /* Smooth fade-in effect */
+}
+
+.text-container {
+    font-size: 75px; /* Smaller font size for mobile devices */
+    font-family: "Giflika-Regular", sans-serif;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #f0f0f0;
+}
+
+.adj,
+.description {
+    position: relative;
+    white-space: normal;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.adj {
+    font-family: "The Seasons Regular", sans-serif;
+    font-size: 24px; /* Smaller font size for mobile devices */
+    left: 0;
+}
+
+.description {
+    font-family: "Garet Regular", sans-serif;
+    font-size: 16px; /* Smaller font size for mobile devices */
+    top: 0;
+    padding-top: 15px;
+    letter-spacing: 0.5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    width: 100%; /* Full width for mobile devices */
+}
+
+.container {
+    text-align: center;
+    background: #0F606B;
+    padding: 20px; /* Smaller padding for mobile devices */
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.219);
+}
+
+.left-container {
+    background: none;
+    box-shadow: none;
+}
+
+.profile-picture {
+    width: 60px; /* Smaller profile picture for mobile devices */
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1em; /* Smaller font size for mobile devices */
+    color: #f0f0f0;
+    font-family: "The Seasons Regular", sans-serif;
+    letter-spacing: 1px;
+}
+
+.subheading {
+    font-size: 1.2em; /* Smaller font size for mobile devices */
+    margin-top: 20px;
+    color: #f0f0f0;
+    text-align: left;
+    font-family: "The Seasons Regular", sans-serif;
+    letter-spacing: 1px;
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid #f0f0f0;
+    margin: 10px 0 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust gap for mobile devices */
+    flex-wrap: wrap;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px; /* Smaller padding for mobile devices */
+    color: #f0f0f0;
+    background: none;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 1.2em; /* Smaller font size for mobile devices */
+    width: 40px; /* Smaller size for mobile devices */
+    height: 40px;
+}
+
+i {
+    font-size: 1.5em; /* Smaller icon size for mobile devices */
+}
+
+.social a:hover {
+    background: #EEECDE;
+    color: #0F606B;
+}
+
+i:hover {
+    color: #0F606B;
+}
+
+.links a {
+    display: block;
+    margin: 15px 0;
+    padding: 15px;
+    color: #f0f0f0;
+    background: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em; /* Smaller font size for mobile devices */
+}
+
+.links a:hover {
+    background: #0056b3;
+}
+
+.newsletter-container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically for mobile devices */
+    align-items: stretch;
+    background: #EEECDE;
+    color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.219);
+}
+
+.newsletter-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.219);
+}
+
+/*.newsletter-image {
+    width: 100%;  Full width for mobile devices 
+    height: 150px; Fixed height for the image 
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.newsletter-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, #EEECDE);
+}*/
+
+.newsletter-text {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em; /* Smaller font size for mobile devices */
+    color: #173B45;
+    font-weight: 600;
+}
+
+/*Newsletter form*/
+
+.form-container {
+    background: #0F606B;
+    padding: 20px; /* Smaller padding for mobile devices */
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    max-height: 300px;
+    margin-top: 30vh;
+    text-align: left;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px; /* Smaller font size for mobile devices */
+    font-family: "Giflika-Regular", sans-serif;
+    text-align: left;
+}
+
+.question-container {
+    min-height: 50px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #f0f0f0;
+}
+
+.question,
+input {
+    font-size: 24px; /* Smaller font size for mobile devices */
+    font-family: "The Seasons Regular", sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.question.loaded,
+input.loaded {
+    visibility: visible;
+    opacity: 1;
+}
+
+.form-step {
+    display: none;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    min-height: 150px; /* Ensure each form step has a consistent minimum height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-step.active {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.input-group {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Add space between the question and input */
+}
+
+.input-group input {
+    flex-grow: 1;
+    padding: 8px; /* Adjust padding to make the input field shorter */
+    font-family: "Garet Regular", sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px; /* Explicit height to match the button */
+    outline: none;
+}
+
+input:focus {
+    border-color: #0f606b7e;
+    box-shadow: 0 0 5px rgba(6, 30, 49, 0.5);
+    transition: border-color 0.3s ease;
+}
+
+.input-group input.error {
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.input-group .next-step {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #EEECDE;
+    color: #173B45;
+    font-family: "Garet Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 55px; /* Match the height of the input field */
+    flex-shrink: 0;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+.input-group .next-step:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.219);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #EEECDE;
+    color: #173B45;
+    font-family: "Garet Regular", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 0px;
+    margin-top: 20px;
+    min-height: 55px;
+}
+
+button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.219);
+}
+
+#success-message {
+    margin-top: 5vh;
+}
+
+@media (min-width: 1025px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        width: 90%;
+        max-width: 1200px;
+        margin-top: 15vh;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .tagline {
+        font-size: 24px;
+    }
+
+    .text-container {
+        font-size: 144px;
+    }
+
+    .adj {
+        font-size: 36px;
+    }
+
+    .description {
+        font-size: 24px;
+    }
+
+    .subheading {
+        font-size: 1.5em;
+    }
+
+    .social {
+        gap: 70px;
+    }
+
+    .social a {
+        padding: 15px;
+        font-size: 1.5em;
+        width: 50px;
+        height: 50px;
+    }
+
+    i {
+        font-size: 2em;
+    }
+
+    .newsletter-container {
+        flex-direction: row;
+    }
+
+    /*.newsletter-image {
+        width: 100px;
+        height: auto;
+    }
+
+    .newsletter-image::after {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 30%, #EEECDE);
+    }*/
+
+    .newsletter-text {
+        padding: 20px;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .form-container {
+        padding: 40px;
+        height: 200px;
+    }
+
+    .form-container h1 {
+        font-size: 36px;
+    }
+
+    .question,
+    input {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+    }
+
+    .text-container {
+        font-size: 100px; /* Smaller font size for iPad Mini */
+    }
+
+    .adj {
+        font-size: 56px; /* Smaller font size for iPad Mini */
+    }
+
+    .description {
+        font-size: 24px; /* Smaller font size for iPad Mini */
+    }
+
+    .tagline {
+        font-size: 24px;
+    }
+
+    .subheading {
+        font-size: 2em; /* Smaller font size for iPad Mini */
+    }
+
+    .social {
+        gap: 70px;
+    }
+
+    .social a {
+        padding: 12px;
+        width: 40px; /* Smaller size for iPad Mini */
+        height: 40px;
+    }
+
+    i {
+        font-size: 3em; /* Smaller icon size for iPad Mini */
+    }
+
+    .newsletter-container {
+        flex-direction: row;
+        height: 100px; /* Reduced height for iPad Mini */
+    }
+
+    /*.newsletter-image {
+        width: 200px;  Adjusted width for iPad Mini 
+        height: auto;
+    } */
+
+    .newsletter-text {
+        flex-grow: 1;
+        display: flex;
+        align-items: center; /* Center the text vertically */
+        justify-content: center; /* Center the text horizontally */
+        padding: 10px;
+        font-size: 1.6em; /* Smaller font size for iPad Mini */
+        text-align: center;
+    }
+
+    .form-container {
+        padding: 30px;
+        height: auto;
+    }
+
+    .form-container h1 {
+        font-size: 30px; /* Smaller font size for iPad Mini */
+    }
+
+    .question,
+    input {
+        font-size: 24px; /* Smaller font size for iPad Mini */
+    }
+
+    .input-group .next-step,
+    button {
+        height: 45px; /* Adjusted height for iPad Mini */
+        font-size: 14px; /* Smaller font size for iPad Mini */
+    }
+}
