@@ -380,6 +380,9 @@ svg.active .svg-elem-10 {
   background-repeat: no-repeat;
   background-size: 50%; /* Adjust background size to contain the image */
   position: absolute;
+  z-index: 1000; /* Ensure it is above other elements */
+  display: block !important; /* Force display to check if CSS is hiding the image */
+  visibility: visible !important; /* Force visibility */
 }
 
 
