@@ -375,7 +375,6 @@ svg.active .svg-elem-10 {
   background-image: url('img/lady.jpg');
   height: 100%;
   width: 100%;
-  background-attachment: fixed;
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 50%; /* Adjust background size to contain the image */
