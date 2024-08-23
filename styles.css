@@ -372,7 +372,7 @@ svg.active .svg-elem-10 {
 }
 
 .left-container .parallax {
-  background-image: url('founder.jpg');
+  background-image: url('img/lady.jpg');
   height: 100%;
   width: 100%;
   background-attachment: fixed;
@@ -1079,7 +1079,7 @@ footer {
 }
 
 .left-container .parallax {
-  background-size: 170%; /* Adjust background size to contain the image */
+  background-size: 100%; /* Adjust background size to contain the image */
   background-position: center;
 }
 
