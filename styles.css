@@ -2,7 +2,7 @@
 *::after,
 *::before {
 	box-sizing: border-box;
-  border: 1px solid red; /* or any color you prefer */
+  /*border: 1px solid red; /* or any color you prefer */
 }
 
 @font-face {
