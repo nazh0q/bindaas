@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const adjText = document.querySelector('.adj');
   const descriptionText = document.querySelector('.description');
   const highlights = document.querySelectorAll('.highlight');
+  const parallaxElement = document.querySelector('.parallax'); // Select the parallax element
 
   // Add the active class to the SVG on page load to trigger the animation
   svg.classList.add('active');
@@ -20,6 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let scalingFactor;
     let startTransitionAt;
+
+    // Apply parallax effect
+    if (parallaxElement) {
+      const parallaxSpeed = 0.5; // Adjust this value to control the speed of the parallax effect
+      parallaxElement.style.backgroundPositionY = -(scrollPosition * parallaxSpeed) + 'px';
+    }
 
     if (window.innerWidth <= 680) { // Adjusted to 400px to capture small devices
       console.log('Applying small viewport adjustments');

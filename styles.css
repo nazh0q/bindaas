@@ -373,11 +373,11 @@ svg.active .svg-elem-10 {
 
 .left-container .parallax {
   background-image: url('img/lady.jpg');
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  background-position: left center;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 50%; /* Adjust background size to contain the image */
+  background-size: 120%; /* Adjust background size to contain the image */
   position: absolute;
 }
 
@@ -1006,6 +1006,11 @@ footer {
     font-size: 54px;
     color: #ffffff;
   }
+
+  .left-container .parallax {
+    background-size: 170%; /* Adjust background size to contain the image */
+    background-position: center top;
+  }
 }
 
 @media (min-width: 820px) and (max-width: 1024px) {
@@ -1073,15 +1078,15 @@ footer {
     font-size: 18px;
   }
   
-/*
+
 .section2 .parallax-wrapper {
-    margin-top: 40px; /* Adjust the space above the parallax effect 
+    margin-top: 40px; /* Adjust the space above the parallax effect */
 }
 
 .left-container .parallax {
-  background-size: 170%; /* Adjust background size to contain the image 
+  background-size: 170%; /* Adjust background size to contain the image */
   background-position: center;
-}*/
+}
 
 .section2 {
   padding-top: 10px; /* Further reduced padding at the top of section2 */
@@ -1264,15 +1269,15 @@ footer {
     bottom: 10px;
   }
 
-/*
+
 .section2 .parallax-wrapper {
-    margin-top: 40px; /* Adjust the space above the parallax effect 
+    margin-top: 40px; /* Adjust the space above the parallax effect */
 }
 
 .left-container .parallax {
-  background-size: 170%; /* Adjust background size to contain the image 
-  background-position: center;
-}*/
+  background-size: 170%; /* Adjust background size to contain the image */
+  background-position: center top;
+}
 
 .section3 {
   height: 100%;
@@ -1438,15 +1443,16 @@ footer {
     padding-right: 20px; /* Optional: Add padding on the right for balance */
 }
 
-/*
+
 .section2 .parallax-wrapper {
-    margin-top: 40px; /* Adjust the space above the parallax effect 
+    margin-top: 40px; /* Adjust the space above the parallax effect */
 }
 
 .left-container .parallax {
-  background-size: 170%; /* Adjust background size to contain the image 
-  background-position: center;
-}*/
+  background-size: cover; /* Ensure it covers the container */
+    background-position: center top; /* Start at the top */
+    height: 150vh; /* Adjust the height for scrolling effect */
+}
 
 .right-text {
     margin-top: 5px; /* Reduce the top margin of the right text */
@@ -1632,8 +1638,9 @@ footer {
   }
 
   .left-container .parallax {
-    background-size: 170%; /* Adjust background size to contain the image */
-    background-position: center;
+    background-size: cover; /* Ensure it covers the container */
+    background-position: center top; /* Start at the top */
+    height: 185vh; /* Adjust the height for scrolling effect */
   }
 
   .right-text {
