@@ -7,22 +7,34 @@
 
 @font-face {
   font-family: "Garet Regular";
-  src: url("Garet Regular.ttf");
+  src: url("/fonts/GaretRegular.woff2") format("woff2"),
+       url("/fonts/GaretRegular.woff") format("woff"),
+       url("/fonts/GaretRegular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Giflika-Regular";
-  src: url("Giflika-Regular.ttf");
+  src: url("/fonts/Giflika-Regular.woff2") format("woff2"),
+       url("/fonts/Giflika-Regular.woff") format("woff"),
+       url("/fonts/Giflika-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Officiallyfunky";
-  src: url("Officiallyfunky.otf");
+  src: url("/fonts/OfficiallyFunkyRegular.woff2") format("woff2"),
+       url("/fonts/OfficiallyFunkyRegular.woff") format("woff"),
+       url("/fonts/Officiallyfunky.otf") format("opentype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "The Seasons Regular";
-  src: url("The Seasons Regular.ttf");
+  src: url("/fonts/TheSeasonsRegular.woff2") format("woff2"),
+       url("/fonts/TheSeasonsRegular.woff") format("woff"),
+       url("/fonts/TheSeasonsRegular.ttf") format("truetype");
+  font-display: swap;
 }
 
 :root {
