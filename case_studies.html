@@ -246,6 +246,14 @@
       // Initialize GSAP
       gsap.registerPlugin(ScrollTrigger);
       
+      // Get transition elements
+      const transitionIn = document.getElementById('page-transition-in');
+      
+      // Reset any transition effects
+      if (transitionIn) {
+        gsap.set(transitionIn, { autoAlpha: 0, display: 'none' });
+      }
+      
       // Check if we came from a transition
       const urlParams = new URLSearchParams(window.location.search);
       const fromTransition = urlParams.get('fromTransition') === 'true';
@@ -296,12 +304,32 @@
         if (event.persisted) {
           // Page was restored from back-forward cache
           // Make sure any transition elements are hidden
-          const transitionIn = document.getElementById('page-transition-in');
           if (transitionIn) {
-            transitionIn.style.display = 'none';
+            gsap.set(transitionIn, { autoAlpha: 0, display: 'none' });
           }
+          
+          // Re-enable animations for case study cards
+          gsap.utils.toArray('.case-study-card').forEach(card => {
+            // Reset any transforms
+            gsap.set(card, { clearProps: "all" });
+            // Animate the cards again
+            gsap.from(card, {
+              y: 50,
+              opacity: 0,
+              duration: 0.8,
+              scrollTrigger: {
+                trigger: card,
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none none"
+              }
+            });
+          });
         }
       });
+      
+      // Ensure ScrollTrigger is properly refreshed
+      ScrollTrigger.refresh();
     });
   </script>
 </body>

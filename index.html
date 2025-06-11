@@ -261,6 +261,24 @@
       // Hide the overlay initially
       gsap.set(transitionOverlay, { autoAlpha: 0 });
       
+      // Reset transition container to initial state
+      function resetTransitionState() {
+        // Reset overlay and container to initial state
+        gsap.set(transitionOverlay, { autoAlpha: 0 });
+        transitionContainer.innerHTML = '';
+        // Remove any iframes
+        const iframes = transitionOverlay.querySelectorAll('iframe');
+        iframes.forEach(iframe => iframe.remove());
+        // Reset all transform and opacity properties
+        gsap.set(transitionContainer, {
+          scale: 1,
+          opacity: 1,
+          y: 0,
+          borderRadius: 0,
+          boxShadow: "none"
+        });
+      }
+      
       // Handle all case study links
       const caseStudyLinks = document.querySelectorAll('.case-study-green');
       
@@ -268,6 +286,9 @@
         link.addEventListener('click', function(e) {
           e.preventDefault();
           const targetUrl = this.getAttribute('href');
+          
+          // Reset the transition state first
+          resetTransitionState();
           
           // Get the current scroll position
           const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -343,21 +364,13 @@
         if (event.persisted) {
           // Page was restored from the back-forward cache
           // Reset the transition overlay
-          if (transitionOverlay) {
-            gsap.set(transitionOverlay, { autoAlpha: 0 });
-            transitionContainer.innerHTML = '';
-            // Remove any iframes
-            const iframes = transitionOverlay.querySelectorAll('iframe');
-            iframes.forEach(iframe => iframe.remove());
-          }
+          resetTransitionState();
         }
       });
       
-      // Additional safety check - hide transition overlay when the page is fully loaded
+      // Additional safety check - reset transition state when the page is fully loaded
       window.addEventListener('load', function() {
-        if (transitionOverlay) {
-          gsap.set(transitionOverlay, { autoAlpha: 0 });
-        }
+        resetTransitionState();
       });
     });
   </script>
