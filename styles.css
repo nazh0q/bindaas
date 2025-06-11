@@ -689,6 +689,7 @@ svg.active .svg-elem-10 {
   font-family: Giflika-Regular, sans-serif;
   font-size: 54px;
   color: #ffffff;
+  margin-bottom: 0; /* Ensure no bottom margin */
 }
 
 /* Connections Section */
@@ -1304,131 +1305,25 @@ footer {
     left: -20%;
     width: 40vw;
     padding: 10px;
+    position: absolute;
+    margin-bottom: 0;
   }
 
   .services-title {
     font-size: 54px;
     text-wrap: nowrap;
     margin-bottom: 0;
+    padding: 0;
+    line-height: 1;
   }
 
-  .scroll-down-arrow span {
-    width: 15px;
-    height: 15px;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
+  .content__title {
+    margin-top: 0;
+    padding-top: 0;
   }
 
-  .scroll-down-arrow {
-    bottom: 10px;
-  }
-
-
-.section2 .parallax-wrapper {
-    margin-top: 40px; /* Adjust the space above the parallax effect */
-}
-
-.left-container .parallax {
-  background-size: 170%; /* Adjust background size to contain the image */
-  background-position: center top;
-}
-
-.section3 {
-  height: 100%;
-}
-
-.section3 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 20px; /* Add padding to create space inside the grid */
-  margin-bottom: 0; /* Remove bottom margin */
-}
-
-.section3 .grid-child2 {
-  margin-bottom: 20px; /* Ensure there's space between grid items */
-  text-align: center;
-  padding: 0 10px; /* Add some padding to make it look better */
-}
-
-.section3 .founder-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px;
-}
-
-.section3 .blurb-header {
-  font-size: 54px;
-  margin-bottom: 10px;
-}
-
-.section3 .blurb-paragraph {
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: left;
-}
-.content {
-  padding-bottom: 90px;
-  padding-top: 50px;
-}
-
-.content--outro {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.connections-quote-text {
-  padding: 3rem;
-}
-
-.parent {
-  padding-bottom: 90px;
-  margin-top: 120px;
-}
-
-.content__title {
-  font-size: 54px;
-}
-
-.content__text {
-  text-align: center;
-  font-size: 24px;
-}
-
-.services-container {
-      left: 0%; /* Align the services container properly */
-      width: 100%; /* Ensure it takes the full width */
-      top: -15%;
-      background-color: #C65951;
-      margin-top: 110px;
-}
-
-
-  .connections-container {
-    border-radius: 0;
-  }
-
-  .connections-subheading {
-    font-size: 28px;
-  }
-
-  .connections-newsletter-text {
-    font-size: 15px;
-  }
-
-  .footer-right p{
-    font-size: 12px;
-  }
-
-  .footer-right a{
-    font-size: 12px;
-  }
-
-  .hide {
-    display: none;
-  }
-
-  .mobile {
-    display: contents;
+  .parent {
+    padding-bottom: 20px;
   }
 }
 
@@ -1591,9 +1486,12 @@ footer {
 .services-container {
       left: 0%; /* Align the services container properly */
       width: 100%; /* Ensure it takes the full width */
-      top: -20%;
+      top: -15%;
       background-color: #C65951;
       margin-top: 95px;
+      padding: 0; /* Remove padding */
+      position: absolute;
+      z-index: 1;
 }
 
 
@@ -1784,9 +1682,11 @@ footer {
   .services-container {
         left: 0%; /* Align the services container properly */
         width: 100%; /* Ensure it takes the full width */
-        top: -20%;
+        top: -15%;
         background-color: #C65951;
         margin-top: 80px;
+        padding: 0; /* Remove padding */
+        z-index: 1;
   }
 
 
@@ -1808,6 +1708,14 @@ footer {
 
   .footer-right a{
     font-size: 12px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .mobile {
+    display: contents;
   }
 }
 
