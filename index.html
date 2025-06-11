@@ -135,7 +135,7 @@
       <div class="content content--sticky content--half bg-1 parent">
         <img class="content__img content__img--small" src="img\yellow flowers 1.png" />
         <h2 class="content__title">Digital Marketing</h2>
-        <p class="content__text content__text--narrow text-meta">In today’s ever-evolving digital ecosystem, every touchpoint, from the inbox to the feed to the search bar, plays a unique role in telling your brand’s story. At Bindaas, we don’t treat email, paid and organic social media, and SEO as separate silos; instead, we weave them into a cohesive journey that feels fresh and authentic. Our philosophy is to craft scroll-stopping concepts and curiosity-sparking email journeys while continuously monitoring engagement and optimizing in real time so every campaign element supports your KPIs without ever feeling gimmicky.
+        <p class="content__text content__text--narrow text-meta">In today's ever-evolving digital ecosystem, every touchpoint, from the inbox to the feed to the search bar, plays a unique role in telling your brand's story. At Bindaas, we don't treat email, paid and organic social media, and SEO as separate silos; instead, we weave them into a cohesive journey that feels fresh and authentic. Our philosophy is to craft scroll-stopping concepts and curiosity-sparking email journeys while continuously monitoring engagement and optimizing in real time so every campaign element supports your KPIs without ever feeling gimmicky.
         </p>
         <!-- Our Services Section -->
         <div class="services-container">
@@ -145,7 +145,7 @@
       <div class="content content--sticky content--half bg-2">
         <img class="content__img content__img--small" src="img\gerbera-daisies.png" />
         <h2 class="content__title">Influencer Marketing</h2>
-        <p class="content__text content__text--narrow text-meta">In today’s fast-paced, social-first landscape, forging genuine connections with creators is non-negotiable. Leveraging a proprietary database of micro- to mega-influencers, Bindaas curates authentic, high-impact partnerships designed to stretch every marketing dollar. From immersive activations and exclusive brand events to long-term ambassador programs, Bindaas builds signature collaborations that open doors to new audiences and elevate your brand’s presence.
+        <p class="content__text content__text--narrow text-meta">In today's fast-paced, social-first landscape, forging genuine connections with creators is non-negotiable. Leveraging a proprietary database of micro- to mega-influencers, Bindaas curates authentic, high-impact partnerships designed to stretch every marketing dollar. From immersive activations and exclusive brand events to long-term ambassador programs, Bindaas builds signature collaborations that open doors to new audiences and elevate your brand's presence.
         </p>
       </div>
       <div class="content content--sticky content--half bg-3">
@@ -242,6 +242,10 @@
     <div id="page-transition-container"></div>
   </div>
 
+  <!-- Back Navigation Overlay -->
+  <div id="back-transition-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: #ffffff; opacity: 0;">
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
@@ -257,9 +261,43 @@
       // Set up the transition elements
       const transitionOverlay = document.getElementById('page-transition-overlay');
       const transitionContainer = document.getElementById('page-transition-container');
+      const backTransitionOverlay = document.getElementById('back-transition-overlay');
       
       // Hide the overlay initially
       gsap.set(transitionOverlay, { autoAlpha: 0 });
+      
+      // Check if we're coming back from case_studies.html
+      const urlParams = new URLSearchParams(window.location.search);
+      const fromTransition = urlParams.get('fromTransition') === 'true';
+      const backButton = urlParams.get('backButton') === 'true';
+      
+      if (fromTransition && backButton) {
+        // We're coming back from case_studies.html via back button
+        // Show a transition effect
+        backTransitionOverlay.style.display = 'block';
+        gsap.to(backTransitionOverlay, {
+          opacity: 1,
+          duration: 0,
+          onComplete: () => {
+            // Animate from top to bottom
+            gsap.fromTo(backTransitionOverlay, 
+              { opacity: 1 },
+              { 
+                opacity: 0, 
+                duration: 0.5,
+                ease: "power2.inOut",
+                onComplete: () => {
+                  backTransitionOverlay.style.display = 'none';
+                  
+                  // Clean up the URL without refreshing the page
+                  const cleanUrl = window.location.pathname + window.location.hash;
+                  window.history.replaceState({}, document.title, cleanUrl);
+                }
+              }
+            );
+          }
+        });
+      }
       
       // Handle all case study links
       const caseStudyLinks = document.querySelectorAll('.case-study-green');
@@ -326,6 +364,9 @@
                     duration: 0.7,
                     ease: "power4.in",
                     onComplete: () => {
+                      // Save the current scroll position to sessionStorage
+                      sessionStorage.setItem('indexScrollPosition', scrollTop);
+                      
                       // Navigate to the target page with the transition parameter
                       window.location.href = transitionUrl.toString();
                     }
@@ -336,6 +377,17 @@
           });
         });
       });
+      
+      // Restore scroll position if coming back from case_studies.html
+      if (fromTransition && backButton) {
+        const savedPosition = sessionStorage.getItem('indexScrollPosition');
+        if (savedPosition) {
+          // Use setTimeout to ensure the page has loaded
+          setTimeout(() => {
+            window.scrollTo(0, parseInt(savedPosition));
+          }, 100);
+        }
+      }
     });
   </script>
 </body>
