@@ -242,10 +242,6 @@
     <div id="page-transition-container"></div>
   </div>
 
-  <!-- Back Navigation Overlay -->
-  <div id="back-transition-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: #ffffff; opacity: 0;">
-  </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
@@ -261,43 +257,9 @@
       // Set up the transition elements
       const transitionOverlay = document.getElementById('page-transition-overlay');
       const transitionContainer = document.getElementById('page-transition-container');
-      const backTransitionOverlay = document.getElementById('back-transition-overlay');
       
       // Hide the overlay initially
       gsap.set(transitionOverlay, { autoAlpha: 0 });
-      
-      // Check if we're coming back from case_studies.html
-      const urlParams = new URLSearchParams(window.location.search);
-      const fromTransition = urlParams.get('fromTransition') === 'true';
-      const backButton = urlParams.get('backButton') === 'true';
-      
-      if (fromTransition && backButton) {
-        // We're coming back from case_studies.html via back button
-        // Show a transition effect
-        backTransitionOverlay.style.display = 'block';
-        gsap.to(backTransitionOverlay, {
-          opacity: 1,
-          duration: 0,
-          onComplete: () => {
-            // Animate from top to bottom
-            gsap.fromTo(backTransitionOverlay, 
-              { opacity: 1 },
-              { 
-                opacity: 0, 
-                duration: 0.5,
-                ease: "power2.inOut",
-                onComplete: () => {
-                  backTransitionOverlay.style.display = 'none';
-                  
-                  // Clean up the URL without refreshing the page
-                  const cleanUrl = window.location.pathname + window.location.hash;
-                  window.history.replaceState({}, document.title, cleanUrl);
-                }
-              }
-            );
-          }
-        });
-      }
       
       // Handle all case study links
       const caseStudyLinks = document.querySelectorAll('.case-study-green');
@@ -364,9 +326,6 @@
                     duration: 0.7,
                     ease: "power4.in",
                     onComplete: () => {
-                      // Save the current scroll position to sessionStorage
-                      sessionStorage.setItem('indexScrollPosition', scrollTop);
-                      
                       // Navigate to the target page with the transition parameter
                       window.location.href = transitionUrl.toString();
                     }
@@ -378,16 +337,28 @@
         });
       });
       
-      // Restore scroll position if coming back from case_studies.html
-      if (fromTransition && backButton) {
-        const savedPosition = sessionStorage.getItem('indexScrollPosition');
-        if (savedPosition) {
-          // Use setTimeout to ensure the page has loaded
-          setTimeout(() => {
-            window.scrollTo(0, parseInt(savedPosition));
-          }, 100);
+      // Handle browser back/forward navigation
+      window.addEventListener('pageshow', function(event) {
+        // This event fires when a page is loaded or restored from the bfcache
+        if (event.persisted) {
+          // Page was restored from the back-forward cache
+          // Reset the transition overlay
+          if (transitionOverlay) {
+            gsap.set(transitionOverlay, { autoAlpha: 0 });
+            transitionContainer.innerHTML = '';
+            // Remove any iframes
+            const iframes = transitionOverlay.querySelectorAll('iframe');
+            iframes.forEach(iframe => iframe.remove());
+          }
         }
-      }
+      });
+      
+      // Additional safety check - hide transition overlay when the page is fully loaded
+      window.addEventListener('load', function() {
+        if (transitionOverlay) {
+          gsap.set(transitionOverlay, { autoAlpha: 0 });
+        }
+      });
     });
   </script>
 </body>

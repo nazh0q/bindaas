@@ -221,7 +221,6 @@
           <a href="tre_case_study.html" class="view-case-study">View Case Study</a>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- Footer -->
@@ -238,11 +237,6 @@
 
   <!-- Page Transition Overlay for Incoming Transitions -->
   <div id="page-transition-in" class="page-transition-in"></div>
-  
-  <!-- Page Transition Overlay for Back Navigation -->
-  <div id="page-transition-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: #ffffff;">
-    <div id="page-transition-container" style="width: 100%; height: 100%;"></div>
-  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -290,76 +284,22 @@
         window.history.replaceState({}, document.title, cleanUrl);
       }
       
-      // Handle back button navigation
-      const transitionOverlay = document.getElementById('page-transition-overlay');
-      const transitionContainer = document.getElementById('page-transition-container');
+      // Setup all case study links for transitions back to index
+      document.querySelectorAll('.case-study-card a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          // No special handling needed here - regular navigation
+        });
+      });
       
-      // Add listeners for back navigation
-      window.addEventListener('popstate', function(event) {
-        // Check if navigating back to index.html
-        if (document.referrer.includes('index.html') || document.referrer === window.location.origin + '/' || document.referrer === window.location.origin) {
-          event.preventDefault();
-          
-          // Show the overlay
-          transitionOverlay.style.display = 'block';
-          gsap.set(transitionOverlay, { autoAlpha: 1 });
-          
-          // Clone the current page for transition
-          const bodyClone = document.body.cloneNode(true);
-          transitionContainer.innerHTML = '';
-          transitionContainer.appendChild(bodyClone);
-          
-          // Create an iframe to preload index.html
-          const iframe = document.createElement('iframe');
-          iframe.style.position = 'fixed';
-          iframe.style.top = '0';
-          iframe.style.left = '0';
-          iframe.style.width = '100%';
-          iframe.style.height = '100%';
-          iframe.style.border = 'none';
-          iframe.style.zIndex = '-1';
-          iframe.style.opacity = '0';
-          
-          // Set the iframe source to index.html
-          iframe.src = document.referrer.includes('index.html') ? document.referrer : 'index.html';
-          
-          // Add the iframe to the page
-          document.body.appendChild(iframe);
-          
-          // Start transition animation
-          gsap.to(transitionContainer, {
-            scale: 0.8,
-            borderRadius: "20px",
-            boxShadow: "0 0 20px rgba(0,0,0,0.3)",
-            duration: 0.5,
-            ease: "power2.inOut",
-            onComplete: () => {
-              // Animate the container away
-              gsap.to(transitionContainer, {
-                y: "-100vh",
-                scale: 0.5,
-                opacity: 0,
-                duration: 0.7,
-                ease: "power4.in",
-                onComplete: () => {
-                  // Navigate back to index.html with a parameter to indicate we're coming from a transition
-                  const targetUrl = document.referrer.includes('index.html') ? 
-                    document.referrer : 
-                    (document.referrer === window.location.origin + '/' || document.referrer === window.location.origin) ? 
-                      'index.html' : 'index.html';
-                  
-                  // Add a transition parameter
-                  const finalUrl = new URL(targetUrl, window.location.href);
-                  finalUrl.searchParams.set('fromTransition', 'true');
-                  finalUrl.searchParams.set('backButton', 'true');
-                  
-                  window.location.href = finalUrl.toString();
-                }
-              });
-            }
-          });
-          
-          return false;
+      // Handle browser back/forward navigation
+      window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+          // Page was restored from back-forward cache
+          // Make sure any transition elements are hidden
+          const transitionIn = document.getElementById('page-transition-in');
+          if (transitionIn) {
+            transitionIn.style.display = 'none';
+          }
         }
       });
     });
