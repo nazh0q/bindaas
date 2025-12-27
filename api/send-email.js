@@ -25,12 +25,14 @@ export default async function handler(req, res) {
     const EMAILJS_PUBLIC_KEY = process.env.EMAILJS_PUBLIC_KEY;
     const EMAILJS_SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
     const EMAILJS_TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID;
+    const EMAILJS_PRIVATE_KEY = process.env.EMAILJS_PRIVATE_KEY;
 
     if (!EMAILJS_PUBLIC_KEY || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
       console.error('EmailJS credentials not configured');
       console.error('EMAILJS_PUBLIC_KEY:', EMAILJS_PUBLIC_KEY ? 'SET' : 'MISSING');
       console.error('EMAILJS_SERVICE_ID:', EMAILJS_SERVICE_ID ? 'SET' : 'MISSING');
       console.error('EMAILJS_TEMPLATE_ID:', EMAILJS_TEMPLATE_ID ? 'SET' : 'MISSING');
+      console.error('EMAILJS_PRIVATE_KEY:', EMAILJS_PRIVATE_KEY ? 'SET' : 'MISSING');
       return res.status(500).json({ error: 'Email service not configured' });
     }
 
@@ -44,17 +46,25 @@ export default async function handler(req, res) {
     };
 
     // Call EmailJS API directly
+    // Include accessToken (private key) for strict mode
+    const requestBody = {
+      service_id: EMAILJS_SERVICE_ID,
+      template_id: EMAILJS_TEMPLATE_ID,
+      user_id: EMAILJS_PUBLIC_KEY,
+      template_params: templateParams
+    };
+    
+    // Add private key if available (required for strict mode)
+    if (EMAILJS_PRIVATE_KEY) {
+      requestBody.accessToken = EMAILJS_PRIVATE_KEY;
+    }
+
     const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        service_id: EMAILJS_SERVICE_ID,
-        template_id: EMAILJS_TEMPLATE_ID,
-        user_id: EMAILJS_PUBLIC_KEY,
-        template_params: templateParams
-      })
+      body: JSON.stringify(requestBody)
     });
 
     if (!response.ok) {
