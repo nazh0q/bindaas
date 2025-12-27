@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#0f606b">
+    <meta name="theme-color" content="#0f606b">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINDAAS | Case Study - The Ramadan Edit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://kit.fontawesome.com/b29129bf0d.js" crossorigin="anonymous"></script>
+    <!-- Include Swiper's CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* New styles for the case study page */
+        html, .no_scroll {
+          overflow-x: hidden;
+        }
+        .no_scroll {
+          position: relative;
+        }
+
+        .case-study-header {
+            background-color: #EFE9E4;
+            margin-top: 3rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .case-study-header h1 {
+            font-family: "Giflika-Regular", sans-serif;
+            font-size: 3rem;
+            color: #522E38;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-study-header p {
+            font-family: "Garet Regular", sans-serif;
+            font-size: 1.25rem;
+            color: #0F606B;
+        }
+
+        .case-study-section {
+            padding: 3rem 1.5rem;
+            background-color: #FEFBF6;
+        }
+
+        .case-study-section:nth-child(even) {
+            background-color: #EFE9E4;
+        }
+
+        .case-study-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-study-intro {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+
+        .case-study-intro h2 {
+            font-family: "Giflika-Regular", sans-serif;
+            font-size: 2.5rem;
+            color: #522E38;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-intro p {
+            font-family: "Garet Regular", sans-serif;
+            font-size: 1.125rem;
+            line-height: 1.5;
+            color: #0F606B;
+        }
+
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 2rem;
+        }
+
+        .case-study-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .case-study-text-block {
+            background-color: #C65951;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .case-study-text-block h3 {
+            font-family: "Giflika-Regular", sans-serif;
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .case-study-text-block h2 {
+            color: #ffffff;
+            margin-top: 1.5rem;
+        }
+
+        .case-study-text-block p {
+            font-family: "Garet Regular", sans-serif;
+            font-size: 1.155rem;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .case-study-numbers {
+            text-align: center;
+            background-color: #522E38;
+            color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+
+        .case-study-numbers h3 {
+            font-family: "Giflika-Regular", sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 columns by default */
+            grid-gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .number-item {
+            background-color: #FFFFFF;
+            color: #522E38;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .number-item h4 {
+            font-family: "Garet Regular", sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #0F606B;
+        }
+
+        .large-number {
+            font-family: "Giflika-Regular", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: #C65951;
+            margin-bottom: 0.5rem;
+        }
+
+        .number-description {
+            font-family: "Garet Regular", sans-serif;
+            font-size: 1rem;
+            color: #0F606B;
+            line-height: 1.6;
+        }
+
+        /* Center the last item if the number of items is odd */
+        .numbers-grid>.number-item:nth-last-child(1):nth-child(odd) {
+            grid-column: span 2;
+            /* Spans across both columns */
+        }
+
+        .sp {
+            max-width: 200px;
+        }
+
+        @-webkit-keyframes carousel-animate {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(200%) scale(0.7);
+  }
+  3%, 14.2857142857% {
+    visibility: visible;
+    opacity: 0.8;
+    transform: translateX(100%) scale(0.9);
+  }
+  17.2857142857%, 28.5714285714% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  31.5714285714%, 42.8571428571% {
+    visibility: visible;
+    opacity: 0.8;
+    transform: translateX(-100%) scale(0.9);
+  }
+  45.8571428571% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateX(-200%) scale(0.9);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-200%) scale(0.7);
+  }
+}
+@keyframes carousel-animate {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(200%) scale(0.7);
+  }
+  3%, 14.2857142857% {
+    visibility: visible;
+    opacity: 0.8;
+    transform: translateX(100%) scale(0.9);
+  }
+  17.2857142857%, 28.5714285714% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  31.5714285714%, 42.8571428571% {
+    visibility: visible;
+    opacity: 0.8;
+    transform: translateX(-100%) scale(0.9);
+  }
+  45.8571428571% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateX(-200%) scale(0.9);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-200%) scale(0.7);
+  }
+}
+:root {
+  --max-width-post: 420px;
+  --text-primary: hsl(
+  	calc(60 * var(--light)),
+  	calc(19% * var(--light)),
+  	calc(97% - 89% * var(--light))
+  );
+  --font-size-sm: clamp(0.7rem, 0.91vw + 0.47rem, 1.2rem);
+  --font-size-base: clamp(0.88rem, 1.14vw + 0.59rem, 1.5rem);
+  --font-size-md: clamp(1.09rem, 1.42vw + 0.74rem, 1.88rem);
+  --font-size-lg: clamp(1.37rem, 1.78vw + 0.92rem, 2.34rem);
+  --font-size-xl: clamp(1.71rem, 2.22vw + 1.15rem, 2.93rem);
+  --font-size-xxl: clamp(2.14rem, 2.77vw + 1.44rem, 3.66rem);
+  --font-size-xxxl: clamp(2.67rem, 3.47vw + 1.8rem, 4.58rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.insta-container {
+  --container-padding-horizontal: 32px;
+  position: relative;
+  padding-inline: var(--container-padding-horizontal);
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.carousel {
+  pointer-events: none;
+  position: absolute;
+  -webkit-padding-before: 67px;
+          padding-block-start: 67px;
+  -webkit-padding-after: max(24px, calc(29px + var(--font-size-md)));
+          padding-block-end: max(24px, calc(29px + var(--font-size-md)));
+  perspective: 100px;
+  width: 100%;
+}
+@media (max-width: 568px) {
+  .carousel {
+    -webkit-padding-after: 52px;
+            padding-block-end: 52px;
+  }
+}
+.carousel__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 61.2vh;
+}
+.carousel .item {
+  position: absolute;
+  max-width: 418px;
+  height: 100%;
+  margin-inline: var(--container-padding-horizontal);
+  opacity: 0;
+  will-change: transform, opacity;
+  -webkit-animation: carousel-animate 27s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+          animation: carousel-animate 27s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+@media (max-width: 568px) {
+  .carousel .item {
+    margin-inline: calc(var(--container-padding-horizontal) + 1px);
+  }
+}
+.carousel .item:nth-child(1) {
+  -webkit-animation-delay: calc(3.8571428571s * -1);
+          animation-delay: calc(3.8571428571s * -1);
+}
+.carousel .item:nth-child(2) {
+  -webkit-animation-delay: calc(3.8571428571s * 0);
+          animation-delay: calc(3.8571428571s * 0);
+}
+.carousel .item:nth-child(3) {
+  -webkit-animation-delay: calc(3.8571428571s * 1);
+          animation-delay: calc(3.8571428571s * 1);
+}
+.carousel .item:nth-child(4) {
+  -webkit-animation-delay: calc(3.8571428571s * 2);
+          animation-delay: calc(3.8571428571s * 2);
+}
+.carousel .item:nth-child(5) {
+  -webkit-animation-delay: calc(3.8571428571s * 3);
+          animation-delay: calc(3.8571428571s * 3);
+}
+.carousel .item:nth-child(6) {
+  -webkit-animation-delay: calc(3.8571428571s * 4);
+          animation-delay: calc(3.8571428571s * 4);
+}
+.carousel .item:last-child {
+  -webkit-animation-delay: calc(-3.8571428571s * 2);
+          animation-delay: calc(-3.8571428571s * 2);
+}
+.carousel img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.instagram {
+  --pading-horizontal: 16px;
+  --border: 1.5px solid #0F606B;
+  max-width: var(--max-width-post);
+  width: 100%;
+  border: var(--border);
+  border-radius: 20px;
+  background-color: #ffffff83;
+}
+.instagram__header {
+  padding-block: 12px;
+  border-bottom: var(--border);
+}
+.instagram__header figure {
+  padding-block: 0;
+  padding-inline: var(--pading-horizontal);
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.instagram__header figure img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: var(--border);
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+}
+.instagram__media {
+  display: flex;
+  border-bottom: var(--border);
+  position: relative;
+}
+
+/* Double-tap heart overlay */
+.double-tap-heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 10;
+  filter: drop-shadow(0 4px 20px rgba(198, 89, 81, 0.5));
+}
+.double-tap-heart svg {
+  width: 100%;
+  height: 100%;
+}
+.double-tap-heart.animate {
+  animation: doubleTapHeart 0.8s ease-out forwards;
+}
+@keyframes doubleTapHeart {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  15% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 1;
+  }
+  45% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+.instagram__media .img {
+  max-width: 100%;
+  height: 60.8vh;
+}
+.instagram__buttons {
+  padding-block: 12px;
+  padding-inline: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.instagram__buttons .left {
+  display: flex;
+  align-items: center;
+}
+.instagram__icon {
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  font-size: var(--font-size-md);
+  min-width: 24px;
+  min-height: 24px;
+}
+.instagram__icon path {
+  stroke: #C65951;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all 0.3s ease;
+  fill: none;
+}
+.instagram__icon--heart {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.instagram__icon--heart.liked path {
+  fill: #C65951 !important;
+  stroke: #C65951 !important;
+  stroke-width: 0;
+}
+.instagram__icon--heart.animating {
+  animation: heartBeat 0.6s ease-in-out;
+}
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.heart-particles {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.heart-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #C65951;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.heart-particle.animate {
+  animation: particleFloat 1s ease-out forwards;
+}
+@keyframes particleFloat {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) scale(0);
+  }
+}
+
+video {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .case-study-header h1 {
+                font-size: 2rem;
+            }
+
+            .case-study-header p {
+                font-size: 1rem;
+            }
+
+            .case-study-intro h2 {
+                font-size: 1.75rem;
+            }
+
+            .case-study-intro p {
+                font-size: 1rem;
+            }
+
+            .case-study-text-block h3 {
+                font-size: 1.5rem;
+            }
+
+            .case-study-text-block p {
+                font-size: 0.875rem;
+            }
+
+            .case-study-numbers h3 {
+                font-size: 2rem;
+            }
+
+            .large-number {
+                font-size: 2rem;
+            }
+
+            .numbers-grid {
+                grid-template-columns: 1fr;
+                /* Stack the grid items */
+            }
+
+            .numbers-grid>.number-item:nth-last-child(1):nth-child(odd) {
+                grid-column: span 1;
+                /* Reset to full width in mobile view */
+            }
+
+            .instagram {
+                max-height: 80vh;
+            }
+            
+            .instagram__media .img {
+                height: 40vh; /* Reduce from 60.8vh */
+            }
+            
+            .carousel__wrapper {
+                height: 40vh; /* Reduce from 61.2vh */
+            }
+        }
+    </style>
+</head>
+
+<body class="no_scroll">
+    <!-- Hamburger Menu Icon -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-content">
+            <div class="menu-left">
+                <div class="menu-logo-container">
+                    <svg id="menu-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1096.19 184.2">
+                        <defs>
+                            <style>
+                                .menu-logo-path {
+                                    fill: #ffffff;
+                                    stroke: none;
+                                }
+                            </style>
+                        </defs>
+                        <g>
+                            <path class="menu-logo-path" d="M103.79,147.16V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h72.84c27.53,0,47.51,14.13,47.51,33.62,0,17.3-7.31,27.29-19.25,38.25,17.3,2.92,38.98,19.49,38.98,48.48,0,31.91-27.29,55.06-64.8,55.06h-75.28v-.97c6.33-6.33,9.74-11.21,9.74-31.67ZM122.55,152.76c34.84-53.84,75.77-74.79,75.77-114.26,0-18.27-9.01-32.16-31.43-32.16h-31.91c-11.94,0-15.59,10.23-15.59,30.7v120.59l3.17-4.87ZM134.97,177.86h34.35c28.26,0,48.72-22.41,48.72-53.11,0-27.29-12.18-44.34-23.88-47.51-16.81,15.1-41.17,33.13-69.68,76.25-7.06,10.72-1.46,24.36,10.48,24.36Z"></path>
+                            <path class="menu-logo-path" d="M272.6,37.04v110.12c0,20.46,3.41,25.34,9.74,31.67v.97h-35.08v-.97c6.33-6.33,9.74-11.21,9.74-31.67V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h35.08v.97c-6.33,6.33-9.74,11.21-9.74,31.67Z"></path>
+                            <path class="menu-logo-path" d="M411.93,153.98V37.04c0-20.46-3.41-25.34-9.75-31.67v-.97h21.44v.97c-6.33,6.33-9.75,11.21-9.75,31.67v142.76h-1.95L307.17,19.75v127.41c0,20.46,3.41,25.34,9.75,31.67v.97h-21.44v-.97c6.33-6.33,9.74-11.21,9.74-31.67V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h19.25l97.21,149.58Z"></path>
+                            <path class="menu-logo-path" d="M578.54,92.1c0,49.21-36.06,87.7-89.17,87.7h-52.62v-.97c6.33-6.33,9.74-11.21,9.74-31.67V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h52.62c53.11,0,89.17,34.59,89.17,87.7ZM477.68,177.86h11.69c43.61,0,73.09-37.76,73.09-85.75,0-51.89-29.48-85.75-73.09-85.75h-11.69c-11.94,0-15.59,10.23-15.59,30.7v110.12c0,20.46,3.65,30.7,15.59,30.7Z"></path>
+                            <path class="menu-logo-path" d="M844.3,147.16L796.31,4.4h-24.85v.97c8.28,6.33,3.65,19.73-.49,26.07-22.33,34.22-54.32,71.83-54.56,106.32L671.58,4.4h-24.85v.97c8.28,6.33,3.65,19.73-.49,26.07-22.41,34.35-54.57,72.11-54.57,106.71,0,17.3,7.31,30.94,19.98,41.66h29.72v-.97c-23.88-9.74-43.12-23.88-43.12-52.13,0-12.42,5.12-25.09,12.67-38.49h72.6l19.98,58.96c6.82,20.22,5.36,25.34-.97,31.67v.97h63.58v-.97c-23.88-9.74-43.12-23.88-43.12-52.13,0-12.42,5.12-25.09,12.67-38.49h72.6l19.98,58.96c6.82,20.22,5.36,25.34-.97,31.67v.97h35.57v-.97c-6.33-6.33-11.69-11.21-18.52-31.67ZM612.14,86.25c9.99-17.54,24.12-35.81,36.3-54.81,3.17-4.87,6.09-9.74,9.01-14.62,2.92,4.63,5.6,10.72,8.77,20.22l16.57,49.21h-70.65ZM736.86,86.25c9.99-17.54,24.12-35.81,36.3-54.81,3.17-4.87,6.09-9.74,9.01-14.62,2.92,4.63,5.6,10.72,8.77,20.22l16.57,49.21h-70.65Z"></path>
+                            <path class="menu-logo-path" d="M934.66.5c20.46,0,44.83,6.58,57.74,15.35v29.72h-.97c-9.99-24.85-33.86-43.12-56.76-43.12-24.61,0-42.39,13.16-42.39,30.94,0,47.75,109.87,53.84,109.87,104.76,0,26.31-25.82,45.56-61.15,45.56-22.9,0-50.43-7.55-65.05-17.79v-29.72h.97c10.48,26.31,37.52,45.56,64.07,45.56,28.26,0,48.72-15.11,48.72-36.06,0-46.77-108.9-50.67-108.9-104.51,0-23.63,22.66-40.69,53.84-40.69Z"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="menu-right">
+                <button class="menu-close" id="menuClose" aria-label="Close menu">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="menu-nav">
+                    <a href="/#about" class="menu-item">
+                        <img class="menu-item-icon" src="../assets/icons/menu-icon.svg" alt="">
+                        <span>Who Are We</span>
+                    </a>
+                    <a href="/#services" class="menu-item">
+                        <img class="menu-item-icon" src="../assets/icons/menu-icon.svg" alt="">
+                        <span>Services</span>
+                    </a>
+                    <a href="/case-studies" class="menu-item">
+                        <img class="menu-item-icon" src="../assets/icons/menu-icon.svg" alt="">
+                        <span>Case Studies</span>
+                    </a>
+                    <a href="/#founder" class="menu-item">
+                        <img class="menu-item-icon" src="../assets/icons/menu-icon.svg" alt="">
+                        <span>Our Founder</span>
+                    </a>
+                    <a href="#contact" class="menu-item">
+                        <img class="menu-item-icon" src="../assets/icons/menu-icon.svg" alt="">
+                        <span>Contact Us</span>
+                    </a>
+                </nav>
+                <div class="menu-socials">
+                    <p class="menu-socials-label">our socials:</p>
+                    <div class="menu-social-icons">
+                        <a href="https://www.instagram.com/bindaas.branding/?utm_source=ig_web_button_share_sheet" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://bindaasbranding.us14.list-manage.com/track/click?u=c747020a95e352f7276f40c7b&id=264d99cdf1&e=d0f2ffa1fe&i=5e515fe522" target="_blank" aria-label="X (Twitter)">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@bindaasbranding" target="_blank" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study Header -->
+    <header class="case-study-header">
+        <!--<h1>Shared Planet</h1>-->
+        <img class="sp" src="../assets/icons/The_Ramadan_Edit.svg" alt="The Ramadan Edit Logo">
+        <p>Digital Marketing/ Brand Consulting/ E-Commerce Development/ Influencer Marketing</p>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="case-study-section">
+        <div class="case-study-content">
+            <div class="case-study-intro">
+                <h2>What is The Ramadan Edit?</h2>
+                <p>Where tradition meets joy, The Ramadan Edit is a contemporary lifestyle brand reimagining how Muslim holidays are celebrated. With vibrant, faith-inspired greeting cards, jewelry, and calendars, the brand speaks to all generations of Muslims who want to honor tradition while creating joyful, stylish rituals of their own. </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Carousel Section -->
+    <section class="case-study-section">
+    <div class="insta-container">
+        <aside class="carousel">
+          <div class="carousel__wrapper">
+            <div class="item" id="slide-0"><img src="../assets/images/re_product.jpg" alt="" width="418" height="418"/></div>
+            <div class="item" id="slide-1"><img src="../assets/images/IMG_FB51E0E9D1B8-1.jpeg" alt="" width="418" height="418"/></div>
+            <div class="item" id="slide-2"><img src="../assets/images/IMG_C630E3B80CA3-1.jpeg" alt="" width="418" height="418"/></div>
+            <div class="item" id="slide-3"><video src="/api/proxy-media?fileId=1F6XjhoPAl3La3cQscz5O1mcpMmVjvHCw&type=video" alt="" width="418" height="418" autoplay muted loop></video></div>
+            <div class="item" id="slide-4"><video src="/api/proxy-media?fileId=1pSmfrVxANtA9dsKERjbnCQEpsmATTQZ5&type=video" alt="" width="418" height="418" autoplay muted loop></video></div>
+            <div class="item" id="slide-5"><img src="../assets/images/IMG_FB51E0E9D1B8-1.jpeg" alt="" width="418" height="418"/></div>
+            <div class="item" id="slide-6"><img src="../assets/images/IMG_C630E3B80CA3-1.jpeg" alt="" width="418" height="418"/></div>
+          </div>
+        </aside>
+        <article class="instagram">
+          <header class="instagram__header">
+            <figure><img src="../assets/icons/tre_profile.svg" alt="SP" width="42" height="42"/>
+              <figcaption>
+                <h4>The Ramadan Edit</h4>
+              </figcaption>
+            </figure>
+          </header>
+          <section class="instagram__media">
+            <div class="img"></div>
+            <!-- Double-tap heart overlay -->
+            <div class="double-tap-heart" id="doubleTapHeart">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#C65951">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+          </section>
+          <section class="instagram__buttons">
+            <div class="left">
+              <svg class="instagram__icon instagram__icon--heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <!-- How We Helped Section -->
+    <section class="case-study-section">
+        <div class="case-study-content">
+            <div class="case-study-text-block">
+                <h3>How Did We Help?</h3>
+                <h2>Objective:</h2>
+                <p>
+                    To develop a full digital launch strategy for a new e-commerce platform, The Ramadan Edit. This encompassed both organic and paid social, and incorporating SEO to improve page ranking.
+                </p>
+                <h2>Marketing Strategy:</h2>
+                <p>
+                    Establishing a social cadence through both organic and paid content for @theramadanedit, with pieces that spoke to our target persona. Additionally, developing 3 paid ads on Instagram that focused on building awareness.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results and Numbers Section -->
+    <section class="case-study-section">
+        <div class="case-study-content">
+            <div class="case-study-numbers">
+                <h3>The Numbers</h3>
+                <h2>(Across 30-Day Brand Launch Period)</h2>
+                <br>
+                <div class="numbers-grid">
+                    <div class="number-item">
+                        <h4>Total Views Across Paid & Organic Assets</h4>
+                        <p class="large-number">41,724</p>
+                        <!--<p class="number-description">Translated to <b>16,677</b> clicks to sharedplanet.com</p>-->
+                    </div>
+                    <div class="number-item">
+                        <h4>Average Cost Per Click</h4>
+                        <p class="large-number">$0.13</p>
+                        <p class="number-description">Compared to a <b>$3.67</b> industry average</p>
+                    </div>
+                    <div class="number-item">
+                        <h4>Total Social Views</h4>
+                        <p class="large-number">215,479</p>
+                    </div>
+                    <div class="number-item">
+                        <h4>Improved Search Ranking</h4>
+                        <p class="large-number">From 34th to 1st Page</p>
+                        <p class="number-description">For <b><a style="color: inherit; text-decoration: none;" href="https://theramadanedit.com/">theramadanedit.com</a></b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="contact-form-container">
+            <div class="contact-form-wrapper">
+                <div class="contact-form-left">
+                    <h2 class="contact-form-title">Contact Us</h2>
+                    <p class="contact-form-intro">We'd love to hear from you! Let us know about your next great project, we can't wait to make magic!</p>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <label for="first-name" class="form-label">First Name:</label>
+                            <input type="text" id="first-name" name="first_name" class="form-input" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="last-name" class="form-label">Last Name:</label>
+                            <input type="text" id="last-name" name="last_name" class="form-input" required>
+                        </div>
+                        <div class="form-row form-row-wide">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-row form-row-wide form-row-message">
+                            <label for="message" class="form-label">Message:</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn">Send Message</button>
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+                <div class="contact-form-right">
+                    <h1 class="contact-form-tagline">where heritage comes to thrive</h1>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="../assets/images/Symbol.png" alt="BINDAAS Logo" class="footer-logo">
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/bindaas.branding/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://bindaasbranding.us14.list-manage.com/track/click?u=c747020a95e352f7276f40c7b&id=264d99cdf1&e=d0f2ffa1fe&i=5e515fe522" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.tiktok.com/@bindaasbranding" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>&copy;2024-2026 BINDAAS | <a href="/pages/privacy">Privacy Notice</a> | <a href="/pages/terms-of-use">Terms of Use</a> | <a href="mailto:info@bindaas.com">info@bindaasbranding.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/contact-form.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+      // Instagram heart animation
+      document.addEventListener('DOMContentLoaded', function() {
+        const heartIcon = document.querySelector('.instagram__icon--heart');
+        if (!heartIcon) return;
+        
+        let isLiked = false;
+        let lastTap = 0;
+        
+        // Create particles container
+        const particlesContainer = document.createElement('div');
+        particlesContainer.className = 'heart-particles';
+        heartIcon.parentElement.style.position = 'relative';
+        heartIcon.parentElement.appendChild(particlesContainer);
+        
+        // Create particles
+        function createParticles() {
+          const particleCount = 12;
+          for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'heart-particle';
+            particlesContainer.appendChild(particle);
+          }
+        }
+        
+        // Animate particles
+        function animateParticles() {
+          const particles = particlesContainer.querySelectorAll('.heart-particle');
+          const iconRect = heartIcon.getBoundingClientRect();
+          const centerX = iconRect.left + iconRect.width / 2;
+          const centerY = iconRect.top + iconRect.height / 2;
+          
+          particles.forEach((particle, index) => {
+            const angle = (index / particles.length) * Math.PI * 2;
+            const distance = 40 + Math.random() * 20;
+            const tx = Math.cos(angle) * distance;
+            const ty = Math.sin(angle) * distance;
+            
+            particle.style.left = '50%';
+            particle.style.top = '50%';
+            particle.style.setProperty('--tx', tx + 'px');
+            particle.style.setProperty('--ty', ty + 'px');
+            particle.style.animationDelay = (index * 0.05) + 's';
+            
+            particle.classList.remove('animate');
+            setTimeout(() => {
+              particle.classList.add('animate');
+            }, 10);
+          });
+        }
+        
+        // Handle click/double tap
+        function handleHeartClick() {
+          const now = Date.now();
+          const timeSinceLastTap = now - lastTap;
+          
+          if (timeSinceLastTap < 300 && timeSinceLastTap > 0) {
+            // Double tap detected
+            if (!isLiked) {
+              toggleLike();
+            }
+          } else {
+            // Single tap
+            toggleLike();
+          }
+          
+          lastTap = now;
+        }
+        
+        function toggleLike() {
+          isLiked = !isLiked;
+          const path = heartIcon.querySelector('path');
+          
+          if (isLiked) {
+            heartIcon.classList.add('liked', 'animating');
+            if (path) {
+              path.setAttribute('fill', '#C65951');
+              path.setAttribute('stroke', '#C65951');
+              path.style.strokeWidth = '0';
+            }
+            animateParticles();
+            setTimeout(() => {
+              heartIcon.classList.remove('animating');
+            }, 600);
+          } else {
+            heartIcon.classList.remove('liked');
+            if (path) {
+              path.setAttribute('fill', 'none');
+              path.setAttribute('stroke', '#C65951');
+              path.style.strokeWidth = '';
+            }
+          }
+        }
+        
+        // Initialize particles
+        createParticles();
+        
+        // Add click event
+        heartIcon.addEventListener('click', handleHeartClick);
+        
+        // Also support double tap on the image/media area
+        const mediaArea = document.querySelector('.instagram__media');
+        const doubleTapHeart = document.getElementById('doubleTapHeart');
+        
+        if (mediaArea && doubleTapHeart) {
+          let lastTapMedia = 0;
+          
+          mediaArea.addEventListener('click', function(e) {
+            const now = Date.now();
+            const timeSinceLastTap = now - lastTapMedia;
+            
+            if (timeSinceLastTap < 300 && timeSinceLastTap > 0) {
+              // Double tap detected - show overlay heart
+              doubleTapHeart.classList.remove('animate');
+              // Force reflow to restart animation
+              void doubleTapHeart.offsetWidth;
+              doubleTapHeart.classList.add('animate');
+              
+              // Also like the post if not already liked
+              if (!isLiked) {
+                toggleLike();
+              }
+            }
+            lastTapMedia = now;
+          });
+        }
+      });
+    </script>
+</body>
+
+</html>
