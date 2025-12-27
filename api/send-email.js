@@ -28,6 +28,9 @@ export default async function handler(req, res) {
 
     if (!EMAILJS_PUBLIC_KEY || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
       console.error('EmailJS credentials not configured');
+      console.error('EMAILJS_PUBLIC_KEY:', EMAILJS_PUBLIC_KEY ? 'SET' : 'MISSING');
+      console.error('EMAILJS_SERVICE_ID:', EMAILJS_SERVICE_ID ? 'SET' : 'MISSING');
+      console.error('EMAILJS_TEMPLATE_ID:', EMAILJS_TEMPLATE_ID ? 'SET' : 'MISSING');
       return res.status(500).json({ error: 'Email service not configured' });
     }
 
@@ -57,7 +60,15 @@ export default async function handler(req, res) {
     if (!response.ok) {
       const errorData = await response.text();
       console.error('EmailJS API Error:', errorData);
-      return res.status(500).json({ error: 'Failed to send email' });
+      console.error('EmailJS Request:', {
+        service_id: EMAILJS_SERVICE_ID,
+        template_id: EMAILJS_TEMPLATE_ID,
+        user_id: EMAILJS_PUBLIC_KEY ? `${EMAILJS_PUBLIC_KEY.substring(0, 5)}...` : 'MISSING'
+      });
+      return res.status(500).json({ 
+        error: 'Failed to send email',
+        details: errorData 
+      });
     }
 
     return res.status(200).json({ success: true, message: 'Email sent successfully' });
