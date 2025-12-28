@@ -762,9 +762,9 @@ svg.active .svg-elem-10 {
   min-height: 75vh; /* Set a minimum height for section 3, allow it to expand */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Changed from center - prevents centering that causes scroll */
   box-sizing: border-box;
-  padding: 80px 0 160px 0; /* Extra bottom padding to accommodate signature (80px signature + 80px margin) */
+  padding: 80px 0; /* Equal padding top and bottom */
   position: relative;
 }
 
@@ -807,6 +807,7 @@ svg.active .svg-elem-10 {
 
 .blurb {
   padding: 20px;
+  padding-bottom: 40px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -844,10 +845,12 @@ svg.active .svg-elem-10 {
 }
 
 .blurb-signature {
-  position: absolute;
-  bottom: -80px;
-  right: 5%;
-  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 2rem;
+  padding-right: 5%;
+  box-sizing: border-box;
 }
 
 /* Animated SVG Signature */
@@ -2161,11 +2164,6 @@ body.menu-open .section1 {
   width: 280px;
 }
 
-.section3 .blurb-signature {
-  bottom: -60px;
-  right: 3%;
-}
-
 
 .content__title {
   font-size: 65px;
@@ -2465,7 +2463,7 @@ body.menu-open .section1 {
     align-items: center;
     width: 100%;
     max-width: 100%;
-    padding: 20px 10px 100px 10px; /* Keep bottom padding for signature */
+    padding: 20px 10px;
     box-sizing: border-box;
     overflow-x: hidden;
   }
@@ -2506,11 +2504,6 @@ body.menu-open .section1 {
 }
 
 .section3 .blurb-signature {
-  position: static;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 0;
   padding-right: 1.5rem;
 }
 
@@ -2632,7 +2625,7 @@ body.menu-open .section1 {
   }
   
   .section3 .blurb {
-    padding: 15px 5px 100px 5px; /* Keep bottom padding for signature */
+    padding: 15px 5px 20px 5px;
   }
   
   .section3 .blurb-paragraph {
@@ -2781,7 +2774,7 @@ body.menu-open .section1 {
     align-items: center;
     width: 100%;
     max-width: 100%;
-    padding: 15px 5px 100px 5px; /* Keep bottom padding for signature */
+    padding: 15px 5px 20px 5px;
     box-sizing: border-box;
     overflow-x: hidden;
   }
@@ -2823,11 +2816,6 @@ body.menu-open .section1 {
 }
 
 .section3 .blurb-signature {
-  position: static;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 0;
   padding-right: 1rem;
 }
 
