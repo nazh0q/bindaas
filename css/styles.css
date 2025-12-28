@@ -4,6 +4,12 @@
 	box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: "Garet Regular";
   src: url("/fonts/GaretRegular.woff2") format("woff2"),
@@ -62,6 +68,9 @@ body, html {
   scroll-behavior: smooth;
   background-color: #EFE9E4;
   color: #0F606B;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .section {
@@ -71,6 +80,9 @@ body, html {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .section1 {
@@ -746,6 +758,7 @@ svg.active .svg-elem-10 {
 .section3 {
   background-color: #522E38;
   width: 100%;
+  max-width: 100%;
   min-height: 75vh; /* Set a minimum height for section 3, allow it to expand */
   display: flex;
   justify-content: center;
@@ -753,7 +766,8 @@ svg.active .svg-elem-10 {
   box-sizing: border-box;
   padding: 80px 0;
   position: relative;
-  overflow: visible; /* Ensure content is not cut off */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: visible; /* Allow vertical overflow for content */
 }
 
 .grid-container {
@@ -761,9 +775,11 @@ svg.active .svg-elem-10 {
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   width: 100%;
+  max-width: 100%;
   padding: 20px;
   box-sizing: border-box;
   align-items: center; /* Center items vertically within the grid */
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .grid-child2 {
@@ -798,6 +814,10 @@ svg.active .svg-elem-10 {
   flex-direction: column;
   align-items: flex-start;
   color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .blurb-header {
@@ -810,6 +830,11 @@ svg.active .svg-elem-10 {
   font-size: 24px;
   margin-bottom: 20px;
   line-height: 1.5;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 .blurb-paragraph.bold-text {
@@ -2404,6 +2429,9 @@ body.menu-open .section1 {
 
 .section3 {
   height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .section3 .grid-container {
@@ -2411,6 +2439,10 @@ body.menu-open .section1 {
   grid-template-columns: 1fr;
   padding: 20px; /* Add padding to create space inside the grid */
   margin-bottom: 0; /* Remove bottom margin */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .section3 .grid-child2 {
@@ -2418,6 +2450,10 @@ body.menu-open .section1 {
   text-align: center;
   align-items: center;
   padding: 0 10px; /* Add some padding to make it look better */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .section3 .founder-image {
@@ -2428,6 +2464,11 @@ body.menu-open .section1 {
 
   .section3 .blurb {
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .section3 .blurb-header {
@@ -2435,12 +2476,24 @@ body.menu-open .section1 {
     margin-bottom: 10px;
     text-align: center;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   .section3 .blurb-paragraph {
     font-size: 20px;
     line-height: 1.6;
     text-align: left;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
 .section3 .signature-text {
@@ -2567,6 +2620,31 @@ body.menu-open .section1 {
   }
 }
 
+/* Specific fix for 390px viewport */
+@media (max-width: 390px) {
+  .section3 .grid-container {
+    padding: 10px;
+  }
+  
+  .section3 .grid-child2 {
+    padding: 0 5px;
+  }
+  
+  .section3 .blurb {
+    padding: 15px 5px;
+  }
+  
+  .section3 .blurb-paragraph {
+    font-size: 18px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .section3 .blurb-header {
+    font-size: 64px;
+  }
+}
+
 @media (max-width: 400px) {
   .video-container {
       width: 100%;
@@ -2664,20 +2742,31 @@ body.menu-open .section1 {
 
   .section3 {
     height: 100%;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .section3 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 20px; /* Add padding to create space inside the grid */
+    padding: 15px; /* Reduced padding for smaller screens */
     margin-bottom: 0; /* Remove bottom margin */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .section3 .grid-child2 {
     margin-bottom: 20px; /* Ensure there's space between grid items */
     text-align: center;
     align-items: center;
-    padding: 0 10px; /* Add some padding to make it look better */
+    padding: 0 5px; /* Reduced padding for smaller screens */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .section3 .founder-image {
@@ -2688,6 +2777,11 @@ body.menu-open .section1 {
 
   .section3 .blurb {
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 5px; /* Reduced padding for smaller screens */
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .section3 .blurb-header {
@@ -2695,12 +2789,25 @@ body.menu-open .section1 {
     margin-bottom: 10px;
     text-align: center;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    padding: 0;
   }
 
   .section3 .blurb-paragraph {
     font-size: 20px;
     line-height: 1.6;
     text-align: left;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
 .section3 .signature-text {
