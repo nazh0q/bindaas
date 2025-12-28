@@ -764,7 +764,7 @@ svg.active .svg-elem-10 {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 80px 0;
+  padding: 80px 0 160px 0; /* Extra bottom padding to accommodate signature (80px signature + 80px margin) */
   position: relative;
   overflow-x: hidden; /* Prevent horizontal overflow */
   overflow-y: visible; /* Allow vertical overflow for content */
@@ -809,6 +809,7 @@ svg.active .svg-elem-10 {
 
 .blurb {
   padding: 20px;
+  padding-bottom: 100px; /* Extra bottom padding to accommodate signature */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -818,6 +819,7 @@ svg.active .svg-elem-10 {
   max-width: 100%;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  position: relative; /* Ensure signature positions relative to blurb */
 }
 
 .blurb-header {
