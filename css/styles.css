@@ -2329,7 +2329,7 @@ body.menu-open .section1 {
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .video-container {
       width: 100%;
       height: 100vh;
@@ -3498,7 +3498,7 @@ body.menu-open .section1 {
 }
 
 /* Mobile Styles */
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .case-studies-section {
     min-height: 50vh;
     padding: 40px 15px;
@@ -3639,7 +3639,7 @@ body.menu-open .section1 {
   transform: translate3d(-200%, 0, 0);
 }
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .case-study-link {
     margin-top: 30px;
   }
