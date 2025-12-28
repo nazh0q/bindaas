@@ -37,12 +37,23 @@ export default async function handler(req, res) {
     }
 
     // Prepare template parameters
+    // Map to EmailJS template variables:
+    // - title: Used in Subject line as "Contact Us: {{title}}"
+    // - name: Used in From Name and email content body
+    // - email: Used in Reply To field
+    // - message: Used in email content body
+    // - time: Current timestamp for the email
     const templateParams = {
-      subject: `${first_name} ${last_name}`,
+      title: `${first_name.trim()} ${last_name.trim()}`,
+      name: `${first_name.trim()} ${last_name.trim()}`,
       first_name: first_name.trim(),
       last_name: last_name.trim(),
       email: email.trim(),
-      message: message.trim()
+      message: message.trim(),
+      time: new Date().toLocaleString('en-US', { 
+        dateStyle: 'medium', 
+        timeStyle: 'short' 
+      })
     };
 
     // Call EmailJS API directly
