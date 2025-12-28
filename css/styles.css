@@ -824,6 +824,8 @@ svg.active .svg-elem-10 {
   font-family: Giflika-Regular, sans-serif;
   font-size: 120px;
   margin-bottom: 20px;
+  line-height: 1.1;
+  white-space: normal;
 }
 
 .blurb-paragraph {
@@ -2472,7 +2474,7 @@ body.menu-open .section1 {
   }
 
   .section3 .blurb-header {
-    font-size: 72px;
+    font-size: 60px;
     margin-bottom: 10px;
     text-align: center;
     width: 100%;
@@ -2480,6 +2482,8 @@ body.menu-open .section1 {
     box-sizing: border-box;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    line-height: 1.1;
+    white-space: normal;
   }
 
   .section3 .blurb-paragraph {
@@ -2641,7 +2645,9 @@ body.menu-open .section1 {
   }
   
   .section3 .blurb-header {
-    font-size: 64px;
+    font-size: 60px;
+    line-height: 1.1;
+    white-space: normal;
   }
 }
 
@@ -2785,7 +2791,7 @@ body.menu-open .section1 {
   }
 
   .section3 .blurb-header {
-    font-size: 90px;
+    font-size: 60px;
     margin-bottom: 10px;
     text-align: center;
     width: 100%;
@@ -2794,6 +2800,8 @@ body.menu-open .section1 {
     overflow-wrap: break-word;
     word-wrap: break-word;
     padding: 0;
+    line-height: 1.1;
+    white-space: normal;
   }
 
   .section3 .blurb-paragraph {
