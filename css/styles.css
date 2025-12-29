@@ -3218,11 +3218,27 @@ body.menu-open .section1 {
   transition: color 0.3s ease;
 }
 
+/* Featured Videos Grid - Two videos side by side */
+.featured-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+.featured-video-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Case Studies Featured Video */
 .case-studies-video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
   border-radius: 16px;
   overflow: hidden;
@@ -3485,6 +3501,11 @@ body.menu-open .section1 {
     max-width: 100%;
   }
   
+  .featured-videos-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 600px;
+  }
   
   .homepage-case-studies-grid {
     grid-template-columns: 1fr;
@@ -3525,6 +3546,12 @@ body.menu-open .section1 {
   .case-studies-featured-subtext {
     font-size: 18px; /* Match services-intro mobile font size */
     margin-bottom: 20px;
+  }
+  
+  .featured-videos-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 100%;
   }
   
   .video-mute-indicator {

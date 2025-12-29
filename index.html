@@ -344,13 +344,28 @@
       <h2 class="case-studies-main-title">Case Studies</h2>
       <h3 class="case-studies-featured-title">Featured Work</h3>
       <p class="case-studies-featured-subtext">Aavrani Spec Ad</p>
-      <div class="case-studies-video-wrapper">
-        <video class="case-studies-video" id="caseStudiesVideo" autoplay muted loop playsinline>
-          <source src="/api/proxy-media?fileId=1PpQlVhc1JSpJIEpQ33LTU621Do0gZOXJ&type=video" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="video-mute-indicator" id="videoMuteIndicator">
-          <i class="fa-solid fa-volume-xmark"></i>
+      <div class="featured-videos-grid">
+        <div class="featured-video-item">
+          <div class="case-studies-video-wrapper">
+            <video class="case-studies-video" id="caseStudiesVideo" muted loop playsinline>
+              <source src="/api/proxy-media?fileId=1PpQlVhc1JSpJIEpQ33LTU621Do0gZOXJ&type=video" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-mute-indicator" id="videoMuteIndicator">
+              <i class="fa-solid fa-volume-xmark"></i>
+            </div>
+          </div>
+        </div>
+        <div class="featured-video-item">
+          <div class="case-studies-video-wrapper">
+            <video class="case-studies-video" id="caseStudiesVideo2" muted loop playsinline>
+              <source src="/api/proxy-media?fileId=1-EVUML2wkl6zlMBGt1hryyTpOHON8-X3&type=video" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-mute-indicator" id="videoMuteIndicator2">
+              <i class="fa-solid fa-volume-xmark"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="case-study-link case-study-link-compact">
@@ -743,31 +758,120 @@
         });
       });
       
-      // Case Studies Video - Click to unmute/mute
-      const caseStudiesVideo = document.getElementById('caseStudiesVideo');
-      const videoMuteIndicator = document.getElementById('videoMuteIndicator');
-      
-      if (caseStudiesVideo && videoMuteIndicator) {
-        const videoWrapper = caseStudiesVideo.closest('.case-studies-video-wrapper');
+      // Case Studies Videos - Click to unmute/mute + Play only when in view
+      // Helper function to setup video with mute toggle and visibility-based playback
+      function setupVideo(videoId, indicatorId) {
+        const video = document.getElementById(videoId);
+        const indicator = document.getElementById(indicatorId);
         
-        if (videoWrapper) {
-          videoWrapper.addEventListener('click', function() {
-            if (caseStudiesVideo.muted) {
-              caseStudiesVideo.muted = false;
-              videoMuteIndicator.classList.add('unmuted');
-            } else {
-              caseStudiesVideo.muted = true;
-              videoMuteIndicator.classList.remove('unmuted');
-            }
+        if (video && indicator) {
+          const videoWrapper = video.closest('.case-studies-video-wrapper');
+          
+          // Click to mute/unmute
+          if (videoWrapper) {
+            videoWrapper.addEventListener('click', function() {
+              if (video.muted) {
+                video.muted = false;
+                indicator.classList.add('unmuted');
+              } else {
+                video.muted = true;
+                indicator.classList.remove('unmuted');
+              }
+            });
+          }
+          
+          // Play only when video is in viewport (saves resources)
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                // Video is visible - play it
+                video.play().catch(err => {
+                  console.log('Video autoplay prevented:', err);
+                });
+              } else {
+                // Video is not visible - pause it
+                video.pause();
+              }
+            });
+          }, {
+            threshold: 0.5 // Trigger when 50% of video is visible
           });
+          
+          observer.observe(video);
+        }
+      }
+      
+      // Setup both videos
+      setupVideo('caseStudiesVideo', 'videoMuteIndicator');
+      setupVideo('caseStudiesVideo2', 'videoMuteIndicator2');
+    });
+    
+    // Fix for back-forward cache (bfcache) - animate overlay when restored from cache
+    window.addEventListener('pageshow', function(event) {
+      if (event.persisted) {
+        // Page was restored from bfcache (back/forward navigation)
+        const transitionOverlay = document.getElementById('page-transition-overlay');
+        const transitionPanel = transitionOverlay ? transitionOverlay.querySelector('.page-transition-panel') : null;
+        const transitionStyleEl = document.getElementById('transition-overlay-styles');
+        
+        if (transitionOverlay && transitionPanel && typeof gsap !== 'undefined') {
+          // Check if overlay was visible (stuck from previous navigation)
+          const isOverlayVisible = transitionOverlay.classList.contains('active') || 
+                                   getComputedStyle(transitionOverlay).visibility === 'visible';
+          
+          if (isOverlayVisible) {
+            // Animate the panel sliding down (same as normal transition)
+            transitionOverlay.style.visibility = 'visible';
+            transitionOverlay.style.pointerEvents = 'all';
+            transitionOverlay.style.zIndex = '99999';
+            
+            gsap.fromTo(transitionPanel, 
+              { y: '0%' },
+              {
+                y: '100%',
+                duration: 0.6,
+                ease: 'power3.inOut',
+                onComplete: () => {
+                  transitionOverlay.classList.remove('active');
+                  transitionOverlay.style.visibility = 'hidden';
+                  transitionOverlay.style.pointerEvents = 'none';
+                  transitionOverlay.style.zIndex = '';
+                  
+                  // Remove injected styles
+                  if (transitionStyleEl) {
+                    transitionStyleEl.remove();
+                  }
+                  
+                  // Restore scrolling
+                  document.body.style.overflow = '';
+                  document.documentElement.style.overflow = '';
+                }
+              }
+            );
+          } else {
+            // Overlay wasn't visible, just clean up
+            if (transitionStyleEl) transitionStyleEl.remove();
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+          }
+        } else {
+          // Fallback: just hide everything if GSAP not available
+          if (transitionOverlay) {
+            transitionOverlay.classList.remove('active');
+            transitionOverlay.style.visibility = 'hidden';
+            transitionOverlay.style.pointerEvents = 'none';
+          }
+          if (transitionStyleEl) transitionStyleEl.remove();
+          document.body.style.overflow = '';
+          document.documentElement.style.overflow = '';
         }
         
-        // Ensure video plays (some browsers require user interaction first)
-        caseStudiesVideo.addEventListener('loadedmetadata', function() {
-          this.play().catch(err => {
-            console.log('Video autoplay prevented:', err);
-          });
-        });
+        // Clean URL parameter if present
+        const url = new URL(window.location.href);
+        if (url.searchParams.has('fromTransition')) {
+          url.searchParams.delete('fromTransition');
+          window.history.replaceState({}, document.title, url.pathname + url.hash);
+        }
       }
     });
   </script>
