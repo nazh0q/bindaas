@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#230C0F">
+  <meta name="theme-color" content="#230C0F">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Nawala case study — digital marketing and creative direction.">
+  <title>Nawala | BINDAAS</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://kit.fontawesome.com/b29129bf0d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header Placeholder - Loaded via includes.js -->
+  <div id="header-placeholder"></div>
+
+  <!-- Hero -->
+  <section class="intro-grid-section">
+    <div class="intro-grid">
+      <div class="intro-tile intro-tile-image">
+        <img src="/assets/images/nawala/nawala-header.png" alt="Nawala">
+      </div>
+      <div class="intro-tile intro-tile-teal">
+        <div class="intro-tile-inner intro-tile-inner-spread intro-tile-inner-spread--start">
+          <span class="cs-hero-stat-logo-name">Nawala</span>
+          <p class="cs-services-tag">Digital Marketing · Creative Direction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Nawala? -->
+  <section class="cs-intro-section">
+    <div class="cs-intro-content">
+      <h2 class="cs-section-title">What is Nawala?</h2>
+      <p class="cs-section-text">Nawala is a collection of artisanal, protein-packed rolls, handcrafted from scratch using South Asian family recipes and organic ingredients. Packed with protein and ready in minutes, these Karachi rolls are lunch made simple and flavorful.</p>
+    </div>
+  </section>
+
+  <!-- How We Helped -->
+  <section class="services-section">
+    <div class="services-container">
+      <div class="services-section-image">
+        <img src="/assets/images/nawala/251025 Bindaas x Nawala_AV_ASB09632.jpg" alt="Nawala campaign">
+      </div>
+      <div class="services-accordion-wrap">
+        <h3 class="cs-help-heading">How Did We Help?</h3>
+        <div class="cs-help-block">
+          <span class="cs-help-label">Objective</span>
+          <p class="cs-help-text">To develop an organic social media strategy to establish social proof for the brand along with product introduction to new audiences.</p>
+        </div>
+        <div class="cs-help-block">
+          <span class="cs-help-label">Marketing Strategy</span>
+          <p class="cs-help-text">Hone in on key value propositions for each product and introduce lifestyle oriented content to emphasize the daily use case of Nawala's rolls.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="cs-gallery-section">
+    <p class="cs-gallery-heading">Gallery</p>
+    <div class="cs-gallery-track" id="nawala-gallery">
+      <div class="cs-gallery-slide"><img src="/assets/images/nawala/poolside-nawala.png" alt="Nawala lifestyle"></div>
+      <div class="cs-gallery-slide"><video src="/api/proxy-media?fileId=1fOePkyYRcFX6d87NVKSqAZJAuaCthZ4F&type=video" autoplay muted loop playsinline></video></div>
+      <div class="cs-gallery-slide"><video src="/api/proxy-media?fileId=10M5gP4Br1jqP1VUa3Vtnqh3F_SQWJoey&type=video" autoplay muted loop playsinline></video></div>
+      <div class="cs-gallery-slide"><video src="/api/proxy-media?fileId=1Rdf1GxhEL1o1Hzoll8nzUvZU8XFyYt8r&type=video" autoplay muted loop playsinline></video></div>
+    </div>
+    <div class="cs-gallery-controls">
+      <button class="cs-gallery-btn cs-gallery-btn--prev" onclick="scrollGallery('nawala-gallery', -1)" aria-label="Previous">&#8592;</button>
+      <button class="cs-gallery-btn cs-gallery-btn--next" onclick="scrollGallery('nawala-gallery', 1)" aria-label="Next">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- The Numbers -->
+  <section class="cs-stats-section">
+    <div class="cs-stats-inner">
+      <h2 class="cs-stats-title">The Numbers</h2>
+      <div class="cs-stats-grid">
+        <div class="cs-stat-item">
+          <span class="cs-stat-number">1.46M</span>
+          <span class="cs-stat-label">Total Social Views</span>
+        </div>
+        <div class="cs-stat-item">
+          <span class="cs-stat-number">12.6%</span>
+          <span class="cs-stat-label">Grew Instagram Following</span>
+        </div>
+        <div class="cs-stat-item">
+          <span class="cs-stat-number">2433%</span>
+          <span class="cs-stat-label">Grew TikTok Following</span>
+        </div>
+        <div class="cs-stat-item">
+          <span class="cs-stat-number">3.2%</span>
+          <span class="cs-stat-label">Average Engagement Rate</span>
+          <span class="cs-stat-desc">Compared to a <strong>0.3%</strong> industry average</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder - Loaded via includes.js -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    function scrollGallery(id, dir) {
+      const track = document.getElementById(id);
+      const slideWidth = track.querySelector('.cs-gallery-slide').offsetWidth + 16;
+      track.scrollBy({ left: dir * slideWidth, behavior: 'smooth' });
+    }
+  </script>
+  <script src="/js/includes.js"></script>
+  <script src="/js/script.js"></script>
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+
+</html>

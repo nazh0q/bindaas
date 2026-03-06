@@ -3,7 +3,7 @@
 // EmailJS credentials are stored securely on the server (Vercel environment variables)
 
 // Handle form submission
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('footerLoaded', function() {
   const contactForm = document.getElementById('contact-form');
   const formMessage = document.getElementById('form-message');
   

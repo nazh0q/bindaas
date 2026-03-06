@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#230C0F">
+  <meta name="theme-color" content="#230C0F">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="The Ramadan Edit case study — digital marketing, brand consulting, e-commerce development, and influencer marketing.">
+  <title>The Ramadan Edit | BINDAAS</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://kit.fontawesome.com/b29129bf0d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header Placeholder - Loaded via includes.js -->
+  <div id="header-placeholder"></div>
+
+  <!-- Hero -->
+  <section class="intro-grid-section">
+    <div class="intro-grid">
+      <div class="intro-tile intro-tile-image">
+        <img src="/assets/images/ramadan-edit/re_product.jpg" alt="The Ramadan Edit">
+      </div>
+      <div class="intro-tile intro-tile-teal">
+        <div class="intro-tile-inner intro-tile-inner-spread intro-tile-inner-spread--start">
+          <span class="cs-hero-stat-logo-name">The Ramadan Edit</span>
+          <p class="cs-services-tag">Digital Marketing · Brand Consulting · E-Commerce Development · Influencer Marketing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is The Ramadan Edit? -->
+  <section class="cs-intro-section">
+    <div class="cs-intro-content">
+      <h2 class="cs-section-title">What is The Ramadan Edit?</h2>
+      <p class="cs-section-text">Where tradition meets joy, The Ramadan Edit is a contemporary lifestyle brand reimagining how Muslim holidays are celebrated. With vibrant, faith-inspired greeting cards, jewelry, and calendars, the brand speaks to all generations of Muslims who want to honor tradition while creating joyful, stylish rituals of their own.</p>
+    </div>
+  </section>
+
+  <!-- How We Helped -->
+  <section class="services-section">
+    <div class="services-container">
+      <div class="services-section-image">
+        <img src="/assets/images/ramadan-edit/IMG_FB51E0E9D1B8-1.jpeg" alt="The Ramadan Edit campaign">
+      </div>
+      <div class="services-accordion-wrap services-accordion-wrap--maroon">
+        <h3 class="cs-help-heading">How Did We Help?</h3>
+        <div class="cs-help-block">
+          <span class="cs-help-label">Objective</span>
+          <p class="cs-help-text">To develop a full digital launch strategy for a new e-commerce platform, The Ramadan Edit. This encompassed both organic and paid social, and incorporating SEO to improve page ranking.</p>
+        </div>
+        <div class="cs-help-block">
+          <span class="cs-help-label">Marketing Strategy</span>
+          <p class="cs-help-text">Establishing a social cadence through both organic and paid content for @theramadanedit, with pieces that spoke to our target persona. Additionally, developing 3 paid ads on Instagram that focused on building awareness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="cs-gallery-section">
+    <p class="cs-gallery-heading">Gallery</p>
+    <div class="cs-gallery-track" id="tre-gallery">
+      <div class="cs-gallery-slide"><img src="/assets/images/ramadan-edit/IMG_C630E3B80CA3-1.jpeg" alt="The Ramadan Edit product"></div>
+      <div class="cs-gallery-slide"><video src="/api/proxy-media?fileId=1F6XjhoPAl3La3cQscz5O1mcpMmVjvHCw&type=video" autoplay muted loop playsinline></video></div>
+      <div class="cs-gallery-slide"><video src="/api/proxy-media?fileId=1pSmfrVxANtA9dsKERjbnCQEpsmATTQZ5&type=video" autoplay muted loop playsinline></video></div>
+    </div>
+    <div class="cs-gallery-controls">
+      <button class="cs-gallery-btn cs-gallery-btn--prev" onclick="scrollGallery('tre-gallery', -1)" aria-label="Previous">&#8592;</button>
+      <button class="cs-gallery-btn cs-gallery-btn--next" onclick="scrollGallery('tre-gallery', 1)" aria-label="Next">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- The Numbers -->
+  <section class="cs-stats-section">
+    <div class="cs-stats-inner">
+      <h2 class="cs-stats-title">The Numbers</h2>
+      <p class="cs-stats-subtitle">Across 30-Day Brand Launch Period</p>
+      <div class="cs-stats-grid">
+        <div class="cs-stat-item">
+          <span class="cs-stat-number">41,724</span>
+          <span class="cs-stat-label">Total Views Across Paid & Organic Assets</span>
+        </div>
+        <div class="cs-stat-item">
+          <span class="cs-stat-number">$0.13</span>
+          <span class="cs-stat-label">Average Cost Per Click</span>
+          <span class="cs-stat-desc">Compared to a <strong>$3.67</strong> industry average</span>
+        </div>
+        <div class="cs-stat-item">
+          <span class="cs-stat-number">215,479</span>
+          <span class="cs-stat-label">Total Social Views</span>
+        </div>
+        <div class="cs-stat-item">
+          <span class="cs-stat-number">34th → 1st</span>
+          <span class="cs-stat-label">Improved Search Ranking</span>
+          <span class="cs-stat-desc">For <strong>theramadanedit.com</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder - Loaded via includes.js -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    function scrollGallery(id, dir) {
+      const track = document.getElementById(id);
+      const slideWidth = track.querySelector('.cs-gallery-slide').offsetWidth + 16;
+      track.scrollBy({ left: dir * slideWidth, behavior: 'smooth' });
+    }
+  </script>
+  <script src="/js/includes.js"></script>
+  <script src="/js/script.js"></script>
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+
+</html>

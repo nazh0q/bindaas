@@ -7,871 +7,408 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
   <link rel="manifest" href="/favicon/site.webmanifest">
   <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#0f606b">
-  <meta name="theme-color" content="#0f606b">
+  <meta name="msapplication-TileColor" content="#230C0F">
+  <meta name="theme-color" content="#230C0F">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <meta name="description" content="At Bindaas, we uplift South Asian brands through digital marketing, communications, and brand strategy, honoring heritage and community." />
-  <title>BINDAAS | where heritage comes to thrive </title>
+  <title>BINDAAS | where heritage comes to thrive</title>
 
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b29129bf0d.js" crossorigin="anonymous"></script>
-  <style>
-    /* Fix for mobile gap */
-    @media (max-width: 430px) {
-      .content__title {
-        margin-top: 0 !important;
-      }
-      .parent {
-        margin-top: 160px !important;
-      }
-    }
-  </style>
-  <!-- Immediate overlay script - runs before page renders -->
-  <script>
-    (function() {
-      if (new URLSearchParams(window.location.search).get('fromTransition') === 'true') {
-        // Inject styles immediately to show overlay (without !important to allow GSAP to override)
-        const style = document.createElement('style');
-        style.id = 'transition-overlay-styles';
-        style.textContent = `
-          #page-transition-overlay {
-            visibility: visible;
-            pointer-events: all;
-            z-index: 99999;
-          }
-          #page-transition-overlay .page-transition-panel {
-            transform: translateY(0%);
-          }
-          body {
-            overflow: hidden;
-          }
-        `;
-        if (document.head) {
-          document.head.appendChild(style);
-        }
-      }
-    })();
-  </script>
 </head>
 
 <body>
-  <div class="section section1" id="hero">
-    <div class="video-container">
-      <!-- Video removed - using background color instead -->
-      <div class="svg-container">
-        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1096.19 184.2">
-          <defs>
-            <style>
-              .cls-1,
-              .cls-2,
-              .cls-3 {
-                fill: #ffffffb9;
-              }
+  <!-- Header Placeholder - Loaded via includes.js -->
+  <div id="header-placeholder"></div>
 
-              .cls-1,
-              .cls-3 {
-                stroke-width: 0px;
-              }
-
-              .cls-2 {
-                stroke: #ffffffb9;
-                stroke-miterlimit: 10;
-              }
-
-              .cls-3 {
-                fill-rule: evenodd;
-              }
-            </style>
-          </defs>
-          <g id="Layer_1-2" data-name="Layer 1">
-            <g>
-              <path class="cls-2 svg-elem-1"
-                d="M103.79,147.16V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h72.84c27.53,0,47.51,14.13,47.51,33.62,0,17.3-7.31,27.29-19.25,38.25,17.3,2.92,38.98,19.49,38.98,48.48,0,31.91-27.29,55.06-64.8,55.06h-75.28v-.97c6.33-6.33,9.74-11.21,9.74-31.67ZM122.55,152.76c34.84-53.84,75.77-74.79,75.77-114.26,0-18.27-9.01-32.16-31.43-32.16h-31.91c-11.94,0-15.59,10.23-15.59,30.7v120.59l3.17-4.87ZM134.97,177.86h34.35c28.26,0,48.72-22.41,48.72-53.11,0-27.29-12.18-44.34-23.88-47.51-16.81,15.1-41.17,33.13-69.68,76.25-7.06,10.72-1.46,24.36,10.48,24.36Z">
-              </path>
-              <path class="cls-2 svg-elem-2"
-                d="M272.6,37.04v110.12c0,20.46,3.41,25.34,9.74,31.67v.97h-35.08v-.97c6.33-6.33,9.74-11.21,9.74-31.67V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h35.08v.97c-6.33,6.33-9.74,11.21-9.74,31.67Z">
-              </path>
-              <path class="cls-2 svg-elem-3"
-                d="M411.93,153.98V37.04c0-20.46-3.41-25.34-9.75-31.67v-.97h21.44v.97c-6.33,6.33-9.75,11.21-9.75,31.67v142.76h-1.95L307.17,19.75v127.41c0,20.46,3.41,25.34,9.75,31.67v.97h-21.44v-.97c6.33-6.33,9.74-11.21,9.74-31.67V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h19.25l97.21,149.58Z">
-              </path>
-              <path class="cls-2 svg-elem-4"
-                d="M578.54,92.1c0,49.21-36.06,87.7-89.17,87.7h-52.62v-.97c6.33-6.33,9.74-11.21,9.74-31.67V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h52.62c53.11,0,89.17,34.59,89.17,87.7ZM477.68,177.86h11.69c43.61,0,73.09-37.76,73.09-85.75,0-51.89-29.48-85.75-73.09-85.75h-11.69c-11.94,0-15.59,10.23-15.59,30.7v110.12c0,20.46,3.65,30.7,15.59,30.7Z">
-              </path>
-              <path class="cls-2 svg-elem-5"
-                d="M844.3,147.16L796.31,4.4h-24.85v.97c8.28,6.33,3.65,19.73-.49,26.07-22.33,34.22-54.32,71.83-54.56,106.32L671.58,4.4h-24.85v.97c8.28,6.33,3.65,19.73-.49,26.07-22.41,34.35-54.57,72.11-54.57,106.71,0,17.3,7.31,30.94,19.98,41.66h29.72v-.97c-23.88-9.74-43.12-23.88-43.12-52.13,0-12.42,5.12-25.09,12.67-38.49h72.6l19.98,58.96c6.82,20.22,5.36,25.34-.97,31.67v.97h63.58v-.97c-23.88-9.74-43.12-23.88-43.12-52.13,0-12.42,5.12-25.09,12.67-38.49h72.6l19.98,58.96c6.82,20.22,5.36,25.34-.97,31.67v.97h35.57v-.97c-6.33-6.33-11.69-11.21-18.52-31.67ZM612.14,86.25c9.99-17.54,24.12-35.81,36.3-54.81,3.17-4.87,6.09-9.74,9.01-14.62,2.92,4.63,5.6,10.72,8.77,20.22l16.57,49.21h-70.65ZM736.86,86.25c9.99-17.54,24.12-35.81,36.3-54.81,3.17-4.87,6.09-9.74,9.01-14.62,2.92,4.63,5.6,10.72,8.77,20.22l16.57,49.21h-70.65Z">
-              </path>
-              <path class="cls-2 svg-elem-6"
-                d="M934.66.5c20.46,0,44.83,6.58,57.74,15.35v29.72h-.97c-9.99-24.85-33.86-43.12-56.76-43.12-24.61,0-42.39,13.16-42.39,30.94,0,47.75,109.87,53.84,109.87,104.76,0,26.31-25.82,45.56-61.15,45.56-22.9,0-50.43-7.55-65.05-17.79v-29.72h.97c10.48,26.31,37.52,45.56,64.07,45.56,28.26,0,48.72-15.11,48.72-36.06,0-46.77-108.9-50.67-108.9-104.51,0-23.63,22.66-40.69,53.84-40.69Z">
-              </path>
-            </g>
-            <g>
-              <path class="cls-3 svg-elem-7"
-                d="M18.9,73.74c-4.77,2.15-8.55,6.11-10.45,11.01.13,0,.27-.01.41-.02,3.84-.05,12.06,3.48,16.57,6.57l1.22.83-.59-.82c-3.27-4.56-7.12-12.93-7.18-16.88,0-.23,0-.46.02-.69ZM27.4,92.4l.79,1.1c3.2,4.46,6.94,12.49,7.26,16.67,4.46-2.05,8.03-5.7,10-10.2-4.18-.19-12.4-3.76-16.98-6.89l-1.04-.71-.02.04ZM19.24,110.38c-4.64-1.98-8.38-5.67-10.42-10.28.09,0,.18,0,.27,0,3.8-.05,11.83-3.75,16.21-6.89l1.4-1.01.13.18-.66.97c-3.13,4.59-6.71,12.8-6.93,17.03ZM28.6,91.07l-.57.41v-.02c3.22-4.7,6.91-13.27,6.85-17.26,0-.22-.01-.43-.03-.64,4.68,1.97,8.45,5.66,10.51,10.29-4.09.21-12.27,4-16.77,7.23Z">
-              </path>
-              <path class="cls-1 svg-elem-8"
-                d="M2.66,98.78C1.05,97.17.04,94.95,0,92.5c-.04-2.42.87-4.71,2.56-6.45,1.69-1.74,3.95-2.71,6.37-2.75,2.61-.04,6.37,1.32,8.38,2.13,1.99.8,3.97,1.75,5.75,2.74-1.04-1.75-2.04-3.7-2.91-5.67-.87-1.98-2.34-5.7-2.37-8.31-.04-2.42.87-4.71,2.56-6.45,1.69-1.74,3.95-2.71,6.37-2.75,2.42-.03,4.71.87,6.45,2.56,1.74,1.69,2.71,3.95,2.75,6.37.05,3.3-2.24,9.37-4.79,14.02,4.57-2.68,10.58-5.15,13.88-5.19,2.42-.03,4.71.88,6.45,2.56,1.74,1.68,2.71,3.95,2.75,6.37.04,2.42-.87,4.71-2.56,6.45-1.69,1.74-3.95,2.71-6.37,2.75-2.61.04-6.37-1.32-8.38-2.13-1.99-.8-3.97-1.75-5.75-2.74,1.04,1.75,2.04,3.7,2.91,5.67.87,1.98,2.34,5.7,2.37,8.31.04,2.42-.87,4.71-2.56,6.45-1.69,1.74-3.95,2.71-6.37,2.75-2.42.03-4.71-.88-6.45-2.56-1.74-1.68-2.71-3.95-2.75-6.37-.05-3.3,2.24-9.37,4.79-14.02-4.57,2.68-10.58,5.15-13.88,5.19-2.55.04-4.87-.99-6.54-2.66ZM26.41,92.14l-1.27-.86c-4.41-3.01-12.45-6.47-16.2-6.42-2.01.03-3.88.84-5.28,2.28-1.4,1.44-2.15,3.34-2.12,5.34.06,4.14,3.48,7.46,7.62,7.4,3.71-.05,11.56-3.66,15.84-6.74l1.4-1h0ZM27.08,92.78l-.96,1.43c-2.95,4.37-6.33,12.32-6.27,16.03.03,2.01.84,3.88,2.28,5.28,1.44,1.4,3.34,2.15,5.34,2.12,2.01-.03,3.88-.84,5.28-2.28,1.4-1.44,2.15-3.34,2.12-5.34-.06-3.75-3.75-11.68-6.89-16l-.9-1.24h0ZM32.15,68.76s-.05-.05-.08-.08c-1.44-1.4-3.34-2.15-5.34-2.12-2.01.03-3.88.84-5.28,2.28-1.4,1.44-2.15,3.34-2.12,5.34.06,3.75,3.75,11.68,6.89,16l.9,1.24.96-1.43c2.95-4.37,6.33-12.32,6.27-16.03-.03-1.97-.81-3.81-2.2-5.2h0ZM50.44,86.53s-.05-.05-.08-.08c-1.44-1.4-3.34-2.15-5.34-2.12-3.71.05-11.56,3.67-15.84,6.74l-1.4,1,1.27.86c4.41,3.01,12.45,6.47,16.2,6.42,2.01-.03,3.88-.84,5.28-2.28,1.4-1.44,2.15-3.34,2.12-5.34-.03-1.97-.81-3.81-2.2-5.2h0Z">
-              </path>
-            </g>
-            <g>
-              <path class="cls-3 svg-elem-9"
-                d="M1060.9,73.74c-4.77,2.15-8.55,6.11-10.45,11.01.13,0,.27-.01.41-.02,3.84-.05,12.06,3.48,16.57,6.57l1.22.83-.59-.82c-3.27-4.56-7.12-12.93-7.18-16.88,0-.23,0-.46.02-.69ZM1069.4,92.4l.79,1.1c3.2,4.46,6.94,12.49,7.26,16.67,4.46-2.05,8.03-5.7,10-10.2-4.18-.19-12.4-3.76-16.98-6.89l-1.04-.71-.02.04ZM1061.24,110.38c-4.64-1.98-8.38-5.67-10.42-10.28.09,0,.18,0,.27,0,3.8-.05,11.83-3.75,16.21-6.89l1.4-1.01.13.18-.66.97c-3.13,4.59-6.71,12.8-6.93,17.03ZM1070.6,91.07l-.57.41v-.02c3.22-4.7,6.91-13.27,6.85-17.26,0-.22-.01-.43-.03-.64,4.68,1.97,8.45,5.66,10.51,10.29-4.09.21-12.27,4-16.77,7.23Z">
-              </path>
-              <path class="cls-1 svg-elem-10"
-                d="M1044.66,98.78c-1.61-1.61-2.62-3.82-2.66-6.27-.04-2.42.87-4.71,2.56-6.45,1.69-1.74,3.95-2.71,6.37-2.75,2.61-.04,6.37,1.32,8.38,2.13,1.99.8,3.97,1.75,5.75,2.74-1.04-1.75-2.04-3.7-2.91-5.67-.87-1.98-2.34-5.7-2.37-8.31-.04-2.42.87-4.71,2.56-6.45,1.69-1.74,3.95-2.71,6.37-2.75,2.42-.03,4.71.87,6.45,2.56,1.74,1.69,2.71,3.95,2.75,6.37.05,3.3-2.24,9.37-4.79,14.02,4.57-2.68,10.58-5.15,13.88-5.19,2.42-.03,4.71.88,6.45,2.56,1.74,1.68,2.71,3.95,2.75,6.37.04,2.42-.87,4.71-2.56,6.45-1.69,1.74-3.95,2.71-6.37,2.75-2.61.04-6.37-1.32-8.38-2.13-1.99-.8-3.97-1.75-5.75-2.74,1.04,1.75,2.04,3.7,2.91,5.67.87,1.98,2.34,5.7,2.37,8.31.04,2.42-.87,4.71-2.56,6.45-1.69,1.74-3.95,2.71-6.37,2.75-2.42.03-4.71-.88-6.45-2.56-1.74-1.68-2.71-3.95-2.75-6.37-.05-3.3,2.24-9.37,4.79-14.02-4.57,2.68-10.58,5.15-13.88,5.19-2.55.04-4.87-.99-6.54-2.66ZM1068.41,92.14l-1.27-.86c-4.41-3.01-12.45-6.47-16.2-6.42-2.01.03-3.88.84-5.28,2.28-1.4,1.44-2.15,3.34-2.12,5.34.06,4.14,3.48,7.46,7.62,7.4,3.71-.05,11.56-3.66,15.84-6.74l1.4-1h0ZM1069.08,92.78l-.96,1.43c-2.95,4.37-6.33,12.32-6.27,16.03.03,2.01.84,3.88,2.28,5.28,1.44,1.4,3.34,2.15,5.34,2.12,2.01-.03,3.88-.84,5.28-2.28,1.4-1.44,2.15-3.34,2.12-5.34-.06-3.75-3.75-11.68-6.89-16l-.9-1.24h0ZM1074.15,68.76s-.05-.05-.08-.08c-1.44-1.4-3.34-2.15-5.34-2.12-2.01.03-3.88.84-5.28,2.28-1.4,1.44-2.15,3.34-2.12,5.34.06,3.75,3.75,11.68,6.89,16l.9,1.24.96-1.43c2.95-4.37,6.33-12.32,6.27-16.03-.03-1.97-.81-3.81-2.2-5.2h0ZM1092.44,86.53s-.05-.05-.08-.08c-1.44-1.4-3.34-2.15-5.34-2.12-3.71.05-11.56,3.67-15.84,6.74l-1.4,1,1.27.86c4.41,3.01,12.45,6.47,16.2,6.42,2.01-.03,3.88-.84,5.28-2.28,1.4-1.44,2.15-3.34,2.12-5.34-.03-1.97-.81-3.81-2.2-5.2h0Z">
-              </path>
-            </g>
-          </g>
-        </svg>
+  <!-- Intro (Hero + Strategy) Grid -->
+  <section class="intro-grid-section" id="hero">
+    <div class="intro-grid" aria-label="Intro content">
+      <div class="intro-tile intro-tile-image">
+        <img src="assets/images/260217 Bindaas Founder Shoot_AV_17.jpg" alt="Creative work">
       </div>
-      <!-- Hamburger Menu Icon -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <!-- Scroll Prompt -->
-      <div class="scroll-prompt" id="scrollPrompt">
-        <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.19 54.19">
-          <defs>
-            <style>
-              .scroll-icon-cls-1, .scroll-icon-cls-2 {
-                fill: #ffffff;
-              }
-              .scroll-icon-cls-2 {
-                fill-rule: evenodd;
-              }
-            </style>
-          </defs>
-          <g>
-            <path class="scroll-icon-cls-2" d="M18.9,8.74c-4.77,2.15-8.55,6.11-10.45,11.01.13,0,.27-.01.41-.02,3.84-.05,12.06,3.48,16.57,6.57l1.22.83-.59-.82c-3.27-4.56-7.12-12.93-7.18-16.88,0-.23,0-.46.02-.69ZM27.4,27.4l.79,1.1c3.2,4.46,6.94,12.49,7.26,16.67,4.46-2.05,8.03-5.7,10-10.2-4.18-.19-12.4-3.76-16.98-6.89l-1.04-.71-.02.04ZM19.24,45.38c-4.64-1.98-8.38-5.67-10.42-10.28.09,0,.18,0,.27,0,3.8-.05,11.83-3.75,16.21-6.89l1.4-1.01.13.18-.66.97c-3.13,4.59-6.71,12.8-6.93,17.03ZM28.6,26.06l-.57.41v-.02c3.22-4.7,6.91-13.27,6.85-17.26,0-.22-.01-.43-.03-.64,4.68,1.97,8.45,5.66,10.51,10.29-4.09.21-12.27,4-16.77,7.23Z"/>
-            <path class="scroll-icon-cls-1" d="M2.66,33.77C1.05,32.16.04,29.95,0,27.5c-.04-2.42.87-4.71,2.56-6.45,1.69-1.74,3.95-2.71,6.37-2.75,2.61-.04,6.37,1.32,8.38,2.13,1.99.8,3.97,1.75,5.75,2.74-1.04-1.75-2.04-3.7-2.91-5.67-.87-1.98-2.34-5.7-2.37-8.31-.04-2.42.87-4.71,2.56-6.45C22.02,1.01,24.28.04,26.7,0c2.42-.03,4.71.87,6.45,2.56,1.74,1.69,2.71,3.95,2.75,6.37.05,3.3-2.24,9.37-4.79,14.02,4.57-2.68,10.58-5.15,13.88-5.19,2.42-.03,4.71.88,6.45,2.56,1.74,1.68,2.71,3.95,2.75,6.37.04,2.42-.87,4.71-2.56,6.45-1.69,1.74-3.95,2.71-6.37,2.75-2.61.04-6.37-1.32-8.38-2.13-1.99-.8-3.97-1.75-5.75-2.74,1.04,1.75,2.04,3.7,2.91,5.67.87,1.98,2.34,5.7,2.37,8.31.04,2.42-.87,4.71-2.56,6.45-1.69,1.74-3.95,2.71-6.37,2.75-2.42.03-4.71-.88-6.45-2.56-1.74-1.68-2.71-3.95-2.75-6.37-.05-3.3,2.24-9.37,4.79-14.02-4.57,2.68-10.58,5.15-13.88,5.19-2.55.04-4.87-.99-6.54-2.66ZM26.41,27.14l-1.27-.86c-4.41-3.01-12.45-6.47-16.2-6.42-2.01.03-3.88.84-5.28,2.28-1.4,1.44-2.15,3.34-2.12,5.34.06,4.14,3.48,7.46,7.62,7.4,3.71-.05,11.56-3.66,15.84-6.74l1.4-1h0ZM27.08,27.78l-.96,1.43c-2.95,4.37-6.33,12.32-6.27,16.03.03,2.01.84,3.88,2.28,5.28,1.44,1.4,3.34,2.15,5.34,2.12,2.01-.03,3.88-.84,5.28-2.28,1.4-1.44,2.15-3.34,2.12-5.34-.06-3.75-3.75-11.68-6.89-16l-.9-1.24h0ZM32.15,3.76s-.05-.05-.08-.08c-1.44-1.4-3.34-2.15-5.34-2.12-2.01.03-3.88.84-5.28,2.28-1.4,1.44-2.15,3.34-2.12,5.34.06,3.75,3.75,11.68,6.89,16l.9,1.24.96-1.43c2.95-4.37,6.33-12.32,6.27-16.03-.03-1.97-.81-3.81-2.2-5.2h0ZM50.44,21.52s-.05-.05-.08-.08c-1.44-1.4-3.34-2.15-5.34-2.12-3.71.05-11.56,3.67-15.84,6.74l-1.4,1,1.27.86c4.41,3.01,12.45,6.47,16.2,6.42,2.01-.03,3.88-.84,5.28-2.28,1.4-1.44,2.15-3.34,2.12-5.34-.03-1.97-.81-3.81-2.2-5.2h0Z"/>
-          </g>
-        </svg>
-        <span class="scroll-text">scroll</span>
+
+      <div class="intro-tile intro-tile-teal">
+        <div class="intro-tile-inner intro-tile-inner-spread">
+          <h1 class="intro-hero-title">
+            A strategic digital and creative agency building distinctive, story driven brands designed to last.
+          </h1>
+          <a href="#about" class="intro-cta">
+            <span class="btn-fill"></span>
+            <span class="btn-text">
+              <span class="btn-label">LEARN MORE</span>
+              <span class="btn-label-hover">LEARN MORE</span>
+            </span>
+            <img src="/assets/icons/right-arrow-white.svg" alt="" class="footer-nav-arrow">
+          </a>
+        </div>
+      </div>
+
+      <div class="intro-tile intro-tile-maroon" id="about">
+        <div class="intro-tile-inner">
+          <h2 class="intro-strategy-title">
+            Strategy that informs creative. Creative that builds resonance. That’s the cycle.
+          </h2>
+          <p class="intro-strategy-subtext">
+            We provide solutions across digital &amp; creative that takes your brand to the next level.
+          </p>
+        </div>
+      </div>
+
+      <div class="intro-tile intro-tile-image">
+        <img src="assets/images/260217 Bindaas Founder Shoot_AV_26.jpg" alt="Campaign detail">
       </div>
     </div>
-    <!-- Menu Overlay -->
-    <div class="menu-overlay" id="menuOverlay">
-      <div class="menu-content">
-        <div class="menu-left">
-          <div class="menu-logo-container">
-            <svg id="menu-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1096.19 184.2">
-              <defs>
-                <style>
-                  .menu-logo-path {
-                    fill: #ffffff;
-                    stroke: none;
-                  }
-                </style>
-              </defs>
-              <g>
-                <path class="menu-logo-path" d="M103.79,147.16V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h72.84c27.53,0,47.51,14.13,47.51,33.62,0,17.3-7.31,27.29-19.25,38.25,17.3,2.92,38.98,19.49,38.98,48.48,0,31.91-27.29,55.06-64.8,55.06h-75.28v-.97c6.33-6.33,9.74-11.21,9.74-31.67ZM122.55,152.76c34.84-53.84,75.77-74.79,75.77-114.26,0-18.27-9.01-32.16-31.43-32.16h-31.91c-11.94,0-15.59,10.23-15.59,30.7v120.59l3.17-4.87ZM134.97,177.86h34.35c28.26,0,48.72-22.41,48.72-53.11,0-27.29-12.18-44.34-23.88-47.51-16.81,15.1-41.17,33.13-69.68,76.25-7.06,10.72-1.46,24.36,10.48,24.36Z"></path>
-                <path class="menu-logo-path" d="M272.6,37.04v110.12c0,20.46,3.41,25.34,9.74,31.67v.97h-35.08v-.97c6.33-6.33,9.74-11.21,9.74-31.67V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h35.08v.97c-6.33,6.33-9.74,11.21-9.74,31.67Z"></path>
-                <path class="menu-logo-path" d="M411.93,153.98V37.04c0-20.46-3.41-25.34-9.75-31.67v-.97h21.44v.97c-6.33,6.33-9.75,11.21-9.75,31.67v142.76h-1.95L307.17,19.75v127.41c0,20.46,3.41,25.34,9.75,31.67v.97h-21.44v-.97c6.33-6.33,9.74-11.21,9.74-31.67V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h19.25l97.21,149.58Z"></path>
-                <path class="menu-logo-path" d="M578.54,92.1c0,49.21-36.06,87.7-89.17,87.7h-52.62v-.97c6.33-6.33,9.74-11.21,9.74-31.67V37.04c0-20.46-3.41-25.34-9.74-31.67v-.97h52.62c53.11,0,89.17,34.59,89.17,87.7ZM477.68,177.86h11.69c43.61,0,73.09-37.76,73.09-85.75,0-51.89-29.48-85.75-73.09-85.75h-11.69c-11.94,0-15.59,10.23-15.59,30.7v110.12c0,20.46,3.65,30.7,15.59,30.7Z"></path>
-                <path class="menu-logo-path" d="M844.3,147.16L796.31,4.4h-24.85v.97c8.28,6.33,3.65,19.73-.49,26.07-22.33,34.22-54.32,71.83-54.56,106.32L671.58,4.4h-24.85v.97c8.28,6.33,3.65,19.73-.49,26.07-22.41,34.35-54.57,72.11-54.57,106.71,0,17.3,7.31,30.94,19.98,41.66h29.72v-.97c-23.88-9.74-43.12-23.88-43.12-52.13,0-12.42,5.12-25.09,12.67-38.49h72.6l19.98,58.96c6.82,20.22,5.36,25.34-.97,31.67v.97h63.58v-.97c-23.88-9.74-43.12-23.88-43.12-52.13,0-12.42,5.12-25.09,12.67-38.49h72.6l19.98,58.96c6.82,20.22,5.36,25.34-.97,31.67v.97h35.57v-.97c-6.33-6.33-11.69-11.21-18.52-31.67ZM612.14,86.25c9.99-17.54,24.12-35.81,36.3-54.81,3.17-4.87,6.09-9.74,9.01-14.62,2.92,4.63,5.6,10.72,8.77,20.22l16.57,49.21h-70.65ZM736.86,86.25c9.99-17.54,24.12-35.81,36.3-54.81,3.17-4.87,6.09-9.74,9.01-14.62,2.92,4.63,5.6,10.72,8.77,20.22l16.57,49.21h-70.65Z"></path>
-                <path class="menu-logo-path" d="M934.66.5c20.46,0,44.83,6.58,57.74,15.35v29.72h-.97c-9.99-24.85-33.86-43.12-56.76-43.12-24.61,0-42.39,13.16-42.39,30.94,0,47.75,109.87,53.84,109.87,104.76,0,26.31-25.82,45.56-61.15,45.56-22.9,0-50.43-7.55-65.05-17.79v-29.72h.97c10.48,26.31,37.52,45.56,64.07,45.56,28.26,0,48.72-15.11,48.72-36.06,0-46.77-108.9-50.67-108.9-104.51,0-23.63,22.66-40.69,53.84-40.69Z"></path>
-              </g>
-            </svg>
-          </div>
-        </div>
-        <div class="menu-right">
-          <button class="menu-close" id="menuClose" aria-label="Close menu">
-            <span></span>
-            <span></span>
-          </button>
-          <nav class="menu-nav">
-            <a href="#about" class="menu-item" data-section="about">
-              <img class="menu-item-icon" src="assets/icons/menu-icon.svg" alt="">
-              <span>Who Are We</span>
-            </a>
-            <a href="#services" class="menu-item" data-section="services">
-              <img class="menu-item-icon" src="assets/icons/menu-icon.svg" alt="">
-              <span>Services</span>
-            </a>
-            <a href="/case-studies" class="menu-item">
-              <img class="menu-item-icon" src="assets/icons/menu-icon.svg" alt="">
-              <span>Case Studies</span>
-            </a>
-            <a href="#founder" class="menu-item" data-section="founder">
-              <img class="menu-item-icon" src="assets/icons/menu-icon.svg" alt="">
-              <span>Our Founder</span>
-            </a>
-            <a href="#contact" class="menu-item" data-section="contact">
-              <img class="menu-item-icon" src="assets/icons/menu-icon.svg" alt="">
-              <span>Contact Us</span>
-            </a>
-          </nav>
-          <div class="menu-socials">
-            <p class="menu-socials-label">our socials:</p>
-            <div class="menu-social-icons">
-              <a href="https://www.instagram.com/bindaas.branding/?utm_source=ig_web_button_share_sheet" target="_blank" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a href="https://bindaasbranding.us14.list-manage.com/track/click?u=c747020a95e352f7276f40c7b&id=264d99cdf1&e=d0f2ffa1fe&i=5e515fe522" target="_blank" aria-label="X (Twitter)">
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-              <a href="https://www.tiktok.com/@bindaasbranding" target="_blank" aria-label="TikTok">
-                <i class="fa-brands fa-tiktok"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="services-container">
+      <div class="services-intro">
+        <h2 class="services-heading">Discover Our Services</h2>
+        <p class="services-intro-text">Our end to end marketing services have got you covered. Now's the perfect time to kick your feet up and grab a cup of chai.</p>
       </div>
-    </div>
-  </div>
-  <div class="section section2" id="about">
-    <div class="grid-container">
-      <div class="grid-child left-container">
-        <div class="text-container">
-          Bindaas
-          <span class="adj">(adj.)</span>
-          <div class="description">- describing an individual or entity as carefree, trendsetting and open-minded</div>
-          <div class="parallax-wrapper">
-            <div class="parallax"></div>
-          </div>
-        </div>
-      </div>
-      <div class="grid-child right-container">
-        <p class="right-text">
-          At Bindaas, we are centered around uplifting <span class="highlight">South Asian brands</span> and voices.
-          <br><br>
-          As a collective of seasoned experts, strategists, and creatives we aim to provide <span class="highlight">360 marketing services</span> that resonate with all audiences.
-          <br><br>
-          We approach every project by creating effective and innovative marketing solutions while honoring the <span class="highlight">heritage</span> that inspires and unites our community.
-        </p>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Our Services Section -->
-  <div class="section services-section" id="services">
-    <div class="services-wrapper">
-      <h2 class="services-main-title">Our Services</h2>
-      <p class="services-intro">Our end to end marketing services have got you covered. Now's the perfect time to kick your feet up and grab a cup of chai.</p>
-      <div class="services-tags-grid">
-        <div class="service-tag-wrapper">
-          <button class="service-tag" data-service="strategy-consulting">
-            <span class="service-tag-text">Strategy & Consulting</span>
-            <span class="service-tag-icon">+</span>
+      <div class="services-accordion-wrap">
+      <div class="services-list">
+        <div class="service-item">
+          <button class="service-button" data-service="social-media">
+            <span>Social Media Management</span>
+            <span class="service-icon">+</span>
           </button>
-          <div class="service-tag-content">
-            <p>Clarity comes first, from positioning and value proposition to a GTM plan that reflects how people actually shop today. Audience fluency paired with commercial rigor keeps the strategy both true to the founder vision and built to perform.</p>
-          </div>
-        </div>
-        <div class="service-tag-wrapper">
-          <button class="service-tag" data-service="branding-design">
-            <span class="service-tag-text">Branding & Design</span>
-            <span class="service-tag-icon">+</span>
-          </button>
-          <div class="service-tag-content">
-            <p>Branding and design is the first touch point for any brand. Rooted in your story while maintaining key branding principles, our designs resonate with your community and convert.</p>
-          </div>
-        </div>
-        <div class="service-tag-wrapper">
-          <button class="service-tag" data-service="social-media">
-            <span class="service-tag-text">Social Media Marketing</span>
-            <span class="service-tag-icon">+</span>
-          </button>
-          <div class="service-tag-content">
+          <div class="service-content">
             <p>Content becomes a repeatable system that turns product truth into stories people want to watch, save, and share. Cultural insight and creator instincts make it feel native on the feed while still supporting growth.</p>
           </div>
         </div>
-        <div class="service-tag-wrapper">
-          <button class="service-tag" data-service="paid-social">
-            <span class="service-tag-text">Paid Social</span>
-            <span class="service-tag-icon">+</span>
+        <div class="service-item">
+          <button class="service-button" data-service="paid-social">
+            <span>Paid Social Ads</span>
+            <span class="service-icon">+</span>
           </button>
-          <div class="service-tag-content">
-            <p>Paid starts with creative that earns attention fast, then intentionally strategy to make the next step unmistakably clear. A brand first testing approach protects distinctiveness while scaling what works.</p>
+          <div class="service-content">
+            <p>Paid starts with creative that earns attention fast, then intentional strategy to make the next step unmistakably clear. A brand first testing approach protects distinctiveness while scaling what works.</p>
           </div>
         </div>
-        <div class="service-tag-wrapper">
-          <button class="service-tag" data-service="influencer-marketing">
-            <span class="service-tag-text">Influencer Marketing</span>
-            <span class="service-tag-icon">+</span>
+        <div class="service-item">
+          <button class="service-button" data-service="email-marketing">
+            <span>Email Marketing</span>
+            <span class="service-icon">+</span>
           </button>
-          <div class="service-tag-content">
-            <p>Creator partnerships are curated like long term relationships, not one off placements. Values, audience fit, and cultural context guide every match, resulting in content that feels real and result oriented.</p>
-          </div>
-        </div>
-        <div class="service-tag-wrapper">
-          <button class="service-tag" data-service="email-marketing">
-            <span class="service-tag-text">Email Marketing</span>
-            <span class="service-tag-icon">+</span>
-          </button>
-          <div class="service-tag-content">
+          <div class="service-content">
             <p>Email turns into your highest leverage owned channel, from foundational flows to campaigns that educate and sell with intention. Voice driven storytelling plus smart segmentation keeps every send personal and revenue minded.</p>
           </div>
         </div>
-        <div class="service-tag-wrapper">
-          <button class="service-tag" data-service="creative-direction">
-            <span class="service-tag-text">Creative Direction</span>
-            <span class="service-tag-icon">+</span>
+        <div class="service-item">
+          <button class="service-button" data-service="web-design">
+            <span>Web Design & Development</span>
+            <span class="service-icon">+</span>
           </button>
-          <div class="service-tag-content">
-            <p>The big idea and the details get shaped together, from concept to styling to shot list, so everything stays cohesive across channels. Taste plus structure means the creative stays bold while giving you the time to focus on how the business scales.</p>
-          </div>
-        </div>
-        <div class="service-tag-wrapper">
-          <button class="service-tag" data-service="brand-activations">
-            <span class="service-tag-text">Brand Activations</span>
-            <span class="service-tag-icon">+</span>
-          </button>
-          <div class="service-tag-content">
-            <p>Experiences get designed to make the brand tangible through community, culture, and moments worth talking about. When celebration leads the strategy, the activation feels meaningful, photogenic, and press ready.</p>
-          </div>
-        </div>
-        <div class="service-tag-wrapper">
-          <button class="service-tag" data-service="ux-ui-design">
-            <span class="service-tag-text">UX/UI Design</span>
-            <span class="service-tag-icon">+</span>
-          </button>
-          <div class="service-tag-content">
+          <div class="service-content">
             <p>E-commerce is a given for any business. A premium digital experience gets built to guide customers with clarity from first click to checkout. Brand storytelling paired with conversion-thinking creates a site that sells while building a loyal community along the way.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="section case-studies-section" id="work">
-    <div class="case-studies-container">
-      <h2 class="case-studies-main-title">Case Studies</h2>
-      <h3 class="case-studies-featured-title">Featured Work</h3>
-      <p class="case-studies-featured-subtext">Aavrani Spec Ad</p>
-      <div class="featured-videos-grid">
-        <div class="featured-video-item">
-          <div class="case-studies-video-wrapper">
-            <video class="case-studies-video" id="caseStudiesVideo" muted loop playsinline>
-              <source src="/api/proxy-media?fileId=1PpQlVhc1JSpJIEpQ33LTU621Do0gZOXJ&type=video" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="video-mute-indicator" id="videoMuteIndicator">
-              <i class="fa-solid fa-volume-xmark"></i>
-            </div>
+        <div class="service-item">
+          <button class="service-button" data-service="creative-direction">
+            <span>Creative Direction & Production</span>
+            <span class="service-icon">+</span>
+          </button>
+          <div class="service-content">
+            <p>The big idea and the details get shaped together, from concept to styling to shot list, so everything stays cohesive across channels. Taste plus structure means the creative stays bold while giving you the time to focus on how the business scales.</p>
           </div>
         </div>
-        <div class="featured-video-item">
-          <div class="case-studies-video-wrapper">
-            <video class="case-studies-video" id="caseStudiesVideo2" muted loop playsinline>
-              <source src="/api/proxy-media?fileId=1-EVUML2wkl6zlMBGt1hryyTpOHON8-X3&type=video" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="video-mute-indicator" id="videoMuteIndicator2">
-              <i class="fa-solid fa-volume-xmark"></i>
-            </div>
+        <div class="service-item">
+          <button class="service-button" data-service="brand-strategy">
+            <span>Brand Strategy & Consulting</span>
+            <span class="service-icon">+</span>
+          </button>
+          <div class="service-content">
+            <p>Clarity comes first, from positioning and value proposition to a GTM plan that reflects how people actually shop today. Audience fluency paired with commercial rigor keeps the strategy both true to the founder vision and built to perform.</p>
           </div>
         </div>
       </div>
-      <div class="case-study-link case-study-link-compact">
-        <p><a class="case-study case-study-green" href="/case-studies" data-replace="Our Work"><span>&#x279C; Explore</span></a></p>
       </div>
     </div>
-  </div>
-  
-  <div class="section section3" id="founder">
-    <div class="grid-container">
-      <div class="grid-child2 founder">
-        <img src="assets/images/founder.jpg" alt="Founder Image" class="founder-image">
-      </div>
-      <div class="grid-child2 blurb">
-        <p class="blurb-header">Our<br>Founder</p>
-        <p class="blurb-paragraph">Having worked in big beauty for over 7 years and starting my own cosmetics brand, I firsthand understand the difficulties of outsourcing to agencies.
-        </p>
-        <p class="blurb-paragraph bold-text" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
-          That's why I sought out to flip the script.
-        </p>
-        <p class="blurb-paragraph">We take a client first approach, developing strategies that fit your business model. Whether it's helping brands build stories that deliver or working one on one with founders to tackle complex problems, <span class="bold-text">we just get it.</span>
-        </p>
-        <p class="blurb-paragraph" style="margin-top: 1.5rem;">With clients spanning industry from food & beverage, fashion, and beauty, I continue to stay inspired by my fellow entrepreneurs. I hope you feel at home here and I can't wait to chat!
-        </p>
-        <div class="blurb-signature">
-          <svg class="signature-svg" width="245" height="172" viewBox="0 0 245 172" xmlns="http://www.w3.org/2000/svg">
-            <!-- Capital A with flourish -->
-            <path fill="#ffffff" class="sig-letter sig-A" d="M94.9465 1.20178C96.1411 0.0924451 97.2078 -0.248889 98.1465 0.177777C99.1705 0.604444 99.6398 1.58578 99.5545 3.12178C99.5545 4.14578 99.1705 5.63912 98.4025 7.60178C97.7198 9.47912 96.7385 11.6978 95.4585 14.2578C94.1785 16.8178 92.6425 19.6765 90.8505 22.8338C89.0585 25.9911 87.0958 29.3618 84.9625 32.9458C84.1091 34.3111 83.3838 35.5058 82.7865 36.5298C82.2745 37.5538 81.7625 38.6631 81.2505 39.8578C80.8238 41.0525 80.3971 42.4605 79.9705 44.0818C79.5438 45.7031 78.9891 47.8364 78.3065 50.4818C77.8798 52.2738 77.3251 54.6631 76.6425 57.6498C75.9598 60.6365 75.2345 63.8365 74.4665 67.2498C73.6985 70.6631 72.9305 74.1618 72.1625 77.7458C71.3945 81.3298 70.7118 84.6151 70.1145 87.6018C69.5171 90.5031 69.0051 92.9778 68.5785 95.0258C68.2371 96.9885 68.0665 98.1405 68.0665 98.4818C68.0665 98.7378 68.2371 98.9085 68.5785 98.9938C68.9198 99.0791 69.7731 99.0365 71.1385 98.8658C72.0771 98.6951 72.9305 98.6098 73.6985 98.6098C74.4665 98.6098 75.0211 98.6525 75.3625 98.7378C76.2158 98.9085 76.6425 99.4205 76.6425 100.274C76.7278 101.042 76.3438 101.511 75.4905 101.682C75.3198 101.767 74.7651 101.852 73.8265 101.938C72.9731 102.023 72.0771 102.151 71.1385 102.322C70.1145 102.407 69.2185 102.535 68.4505 102.706C67.7678 102.791 67.3838 102.876 67.2985 102.962C67.2131 103.047 66.9145 104.37 66.4025 106.93C65.8905 109.49 65.2505 112.647 64.4825 116.402C63.7998 120.071 63.0745 123.954 62.3065 128.05C61.6238 132.06 61.0265 135.559 60.5145 138.546C59.3198 145.458 58.3811 151.388 57.6985 156.338C57.0158 161.372 56.6318 164.914 56.5465 166.962C56.4611 168.071 56.3758 169.01 56.2905 169.778C56.2051 170.631 56.0771 171.143 55.9065 171.314C55.3091 172.082 54.4985 172.082 53.4745 171.314C53.2185 171.058 53.0478 170.674 52.9625 170.162C52.8771 169.735 52.9198 168.54 53.0905 166.578C53.1758 165.468 53.3038 163.932 53.4745 161.97C53.7305 160.007 54.0291 157.788 54.3705 155.314C54.7118 152.924 55.0958 150.322 55.5225 147.506C55.9491 144.69 56.4185 141.831 56.9305 138.93C57.1865 137.479 57.4851 135.644 57.8265 133.426C58.2531 131.207 58.6798 128.818 59.1065 126.258C59.6185 123.698 60.0878 121.138 60.5145 118.578C61.0265 116.018 61.4958 113.714 61.9225 111.666C62.3491 109.532 62.6905 107.783 62.9465 106.418C63.2025 104.967 63.3731 104.156 63.4585 103.986C63.5438 103.644 63.4585 103.474 63.2025 103.474C62.9465 103.388 62.2211 103.431 61.0265 103.602C60.2585 103.687 59.0211 103.858 57.3145 104.114C55.6931 104.37 53.9011 104.711 51.9385 105.138C49.9758 105.479 48.0131 105.863 46.0505 106.29C44.0878 106.631 42.4238 106.972 41.0585 107.314L37.3465 108.082L32.6105 116.018C28.8558 122.332 25.9118 127.324 23.7785 130.994C21.6451 134.578 19.9811 137.266 18.7865 139.058C17.6771 140.85 16.8665 141.959 16.3545 142.386C15.8425 142.812 15.3305 143.026 14.8185 143.026C14.1358 143.026 13.7091 142.77 13.5385 142.258C13.3678 141.831 13.4958 141.319 13.9225 140.722C14.4345 140.039 15.2451 138.802 16.3545 137.01C17.4638 135.218 18.7011 133.17 20.0665 130.866C21.4318 128.562 22.8398 126.172 24.2905 123.698C25.7411 121.223 27.0211 118.962 28.1305 116.914C29.3251 114.866 30.3065 113.159 31.0745 111.794C31.8425 110.428 32.1838 109.703 32.0985 109.618C32.0131 109.532 31.5438 109.618 30.6905 109.874C29.8371 110.13 28.7278 110.471 27.3625 110.898C25.9971 111.324 24.4611 111.836 22.7545 112.434C21.1331 112.946 19.5118 113.5 17.8905 114.098C14.4771 115.378 11.7038 116.402 9.57046 117.17C7.43713 117.938 5.73046 118.492 4.45046 118.834C3.2558 119.09 2.35979 119.218 1.76246 119.218C1.16513 119.218 0.738462 119.09 0.482462 118.834C-0.114872 118.151 -0.157538 117.511 0.354462 116.914C0.866462 116.316 1.8478 115.89 3.29846 115.634C3.72513 115.548 5.09046 115.122 7.39446 114.354C9.69846 113.586 12.3011 112.647 15.2025 111.538C18.1038 110.428 20.9198 109.404 23.6505 108.466C26.3811 107.527 28.3011 106.93 29.4105 106.674C30.4345 106.332 31.3731 106.076 32.2265 105.906C33.1651 105.65 33.7625 105.479 34.0185 105.394C34.4451 105.223 34.9998 104.668 35.6825 103.73C36.3651 102.791 37.4318 101.084 38.8825 98.6098C40.4185 96.0498 41.8265 93.7031 43.1065 91.5698C44.4718 89.3511 45.8371 87.1751 47.2025 85.0418C48.5678 82.9085 49.9758 80.6898 51.4265 78.3858C52.9625 75.9965 54.7118 73.3085 56.6745 70.3218C57.6985 68.7858 58.8505 67.0365 60.1305 65.0738C61.4105 63.1111 62.6905 61.1485 63.9705 59.1858C65.3358 57.1378 66.6158 55.1751 67.8105 53.2978C69.0905 51.3351 70.1998 49.6285 71.1385 48.1778C72.9305 45.4471 74.2958 43.3138 75.2345 41.7778C76.1731 40.2418 76.8985 38.9618 77.4105 37.9378C78.0078 36.9138 78.4771 35.9751 78.8185 35.1218C79.1598 34.2685 79.5438 33.2018 79.9705 31.9218C81.2505 28.0818 82.4878 24.6685 83.6825 21.6818C84.8771 18.6951 86.1998 15.7938 87.6505 12.9778C88.9305 10.4178 90.2531 7.98579 91.6185 5.68179C93.0691 3.37778 94.1785 1.88445 94.9465 1.20178ZM74.0825 52.6578C74.3385 51.8044 74.5091 51.0791 74.5945 50.4818C74.7651 49.8844 74.8505 49.5004 74.8505 49.3298C74.7651 49.2445 74.1678 50.0125 73.0585 51.6338C71.9491 53.2551 70.4985 55.3885 68.7065 58.0338C66.9998 60.6791 65.0371 63.7085 62.8185 67.1218C60.6851 70.4498 58.5518 73.8205 56.4185 77.2338C54.2851 80.6471 52.1945 83.9325 50.1465 87.0898C48.1838 90.1618 46.5625 92.7645 45.2825 94.8978C44.0025 96.9458 42.9785 98.5671 42.2105 99.7618C41.5278 100.956 41.0158 101.852 40.6745 102.45C40.3331 103.047 40.1625 103.431 40.1625 103.602C40.1625 103.687 40.2478 103.73 40.4185 103.73C40.5038 103.73 41.1011 103.644 42.2105 103.474C43.3198 103.218 44.5998 102.962 46.0505 102.706C47.5011 102.364 49.3785 102.023 51.6825 101.682C53.9865 101.255 55.9918 100.871 57.6985 100.53L64.2265 99.5058L65.3785 93.4898C66.0611 90.1618 66.8291 86.4071 67.6825 82.2258C68.5358 78.0445 69.3465 74.0338 70.1145 70.1938C70.9678 66.2685 71.7358 62.7271 72.4185 59.5698C73.1865 56.4124 73.7411 54.1085 74.0825 52.6578ZM91.4905 14.5138C93.1118 11.3565 94.0505 9.35112 94.3065 8.49778C94.6478 7.55911 94.3065 7.90045 93.2825 9.52179C93.0265 9.94845 92.5571 10.8018 91.8745 12.0818C91.2771 13.2765 90.6371 14.5138 89.9545 15.7938C89.3571 17.0738 88.8025 18.2684 88.2905 19.3778C87.8638 20.4018 87.6505 20.9565 87.6505 21.0418C87.6505 21.3831 87.9491 21.0845 88.5465 20.1458C89.1438 19.1218 90.1251 17.2445 91.4905 14.5138Z"/>
-            <!-- Letter 'a' (first) -->
-            <path fill="#ffffff" class="sig-letter sig-a1" d="M113.615 96.0498C114.042 95.7938 114.554 95.7938 115.151 96.0498C115.749 96.2205 115.877 96.7751 115.535 97.7138C115.194 98.6525 114.469 99.9325 113.359 101.554C112.25 103.175 110.885 104.754 109.263 106.29C106.703 108.85 104.527 110.514 102.735 111.282C101.029 111.964 99.4501 111.836 97.9995 110.898C97.4875 110.556 97.0181 110.172 96.5915 109.746C96.2501 109.319 95.9515 108.764 95.6954 108.082C95.4394 107.399 95.1835 106.503 94.9275 105.394C94.7568 104.284 94.5435 102.876 94.2875 101.17C94.1168 100.316 93.9461 99.8898 93.7755 99.8898C93.6901 99.8898 93.4341 100.188 93.0075 100.786C92.5808 101.383 92.0688 102.108 91.4715 102.962C90.0208 105.18 88.7408 106.588 87.6315 107.186C86.6075 107.698 85.5408 107.484 84.4314 106.546C84.0048 106.119 83.7488 105.735 83.6635 105.394C83.4928 104.967 83.3648 104.114 83.2794 102.834C83.1088 100.188 83.4501 97.6285 84.3035 95.1538C85.0715 92.5938 86.2235 90.4605 87.7595 88.7538C89.3808 87.0471 91.0021 86.4498 92.6235 86.9618C94.2448 87.3885 95.3115 88.7965 95.8235 91.1858C95.9088 91.6125 96.0368 92.0391 96.2075 92.4658C96.3781 92.8925 96.5488 93.2338 96.7195 93.4898C97.0608 93.9165 97.2741 94.5138 97.3595 95.2818C97.4448 96.0498 97.5728 97.3725 97.7435 99.2498C97.9141 102.492 98.2128 104.796 98.6395 106.162C99.0661 107.527 99.7488 108.21 100.687 108.21C101.37 108.21 102.351 107.74 103.631 106.802C104.911 105.863 106.277 104.583 107.727 102.962C108.069 102.62 108.538 102.066 109.135 101.298C109.818 100.53 110.458 99.7618 111.055 98.9938C111.738 98.2258 112.293 97.5431 112.719 96.9458C113.231 96.3485 113.53 96.0498 113.615 96.0498ZM90.0635 98.6098C90.7461 97.5005 91.2581 96.6471 91.5994 96.0498C92.0261 95.3671 92.3248 94.8551 92.4955 94.5138C92.7515 94.0871 92.8795 93.7458 92.8795 93.4898C92.8795 93.1485 92.8368 92.7645 92.7514 92.3378C92.3248 90.2045 91.5568 89.6071 90.4475 90.5458C89.8501 91.0578 89.2101 91.9965 88.5275 93.3618C87.9301 94.6418 87.4608 95.9645 87.1195 97.3298C86.8635 98.6098 86.6928 99.9325 86.6075 101.298C86.5221 102.663 86.6074 103.346 86.8634 103.346C86.9488 103.346 87.2901 102.876 87.8875 101.938C88.5701 100.999 89.2955 99.8898 90.0635 98.6098Z"/>
-            <!-- Letter 's' -->
-            <path fill="#ffffff" class="sig-letter sig-s" d="M140.034 95.9218C140.632 95.7511 141.101 95.8365 141.442 96.1778C141.869 96.4338 142.082 96.8178 142.082 97.3298C142.082 97.5005 141.741 98.0125 141.058 98.8658C140.461 99.7191 139.693 100.658 138.754 101.682C136.706 103.986 134.616 106.375 132.482 108.85C130.434 111.324 128.813 113.372 127.618 114.994L125.698 117.426L126.338 119.986C126.765 121.692 126.978 123.442 126.978 125.234C126.978 127.026 126.808 128.732 126.466 130.354C126.125 131.975 125.613 133.426 124.93 134.706C124.248 135.986 123.437 136.924 122.498 137.522C120.706 138.802 119.128 138.674 117.762 137.138C115.97 135.26 115.586 132.188 116.61 127.922C116.696 127.324 116.909 126.599 117.25 125.746C117.592 124.892 117.976 123.996 118.402 123.058C118.829 122.119 119.256 121.223 119.682 120.37C120.194 119.516 120.621 118.834 120.962 118.322C121.389 117.895 121.602 117.554 121.602 117.298C121.602 116.956 121.517 116.572 121.346 116.146C120.92 115.207 120.194 114.012 119.17 112.562C118.232 111.026 117.208 109.618 116.098 108.338C113.88 105.863 112.685 103.559 112.514 101.426C112.258 99.2071 112.984 96.4765 114.69 93.2338C115.544 91.5271 116.354 90.0765 117.122 88.8818C117.976 87.6871 118.701 86.8765 119.298 86.4498C119.896 86.0231 120.493 86.0231 121.09 86.4498C121.602 86.7911 122.029 87.4311 122.37 88.3698C123.053 90.1618 122.541 90.9725 120.834 90.8018C120.322 90.7165 119.938 90.8018 119.682 91.0578C119.426 91.3138 119 91.9538 118.402 92.9778C118.061 93.5751 117.677 94.3431 117.25 95.2818C116.909 96.2205 116.61 97.0311 116.354 97.7138C116.098 98.6525 115.928 99.4631 115.842 100.146C115.842 100.743 115.928 101.383 116.098 102.066C116.269 102.663 116.61 103.346 117.122 104.114C117.634 104.882 118.36 105.82 119.298 106.93C120.066 107.868 120.792 108.85 121.474 109.874C122.242 110.812 122.797 111.495 123.138 111.922L124.162 113.714L125.314 112.178C126.85 110.3 128.429 108.423 130.05 106.546C131.672 104.583 133.165 102.834 134.53 101.298C135.896 99.7618 137.09 98.5245 138.114 97.5858C139.138 96.5618 139.778 96.0071 140.034 95.9218ZM123.522 126.386C123.693 124.252 123.608 122.887 123.266 122.29C123.096 121.948 122.925 121.948 122.754 122.29C122.584 122.546 122.2 123.271 121.602 124.466C120.749 126.172 120.152 127.836 119.81 129.458C119.469 130.994 119.384 132.274 119.554 133.298C119.981 135.431 120.834 135.047 122.114 132.146C122.626 131.207 122.968 130.354 123.138 129.586C123.309 128.818 123.437 127.751 123.522 126.386Z"/>
-            <!-- Letter 'h' -->
-            <path fill="#ffffff" class="sig-letter sig-h" d="M135.049 124.21C134.623 123.527 134.495 122.204 134.665 120.242C134.836 118.194 135.22 116.188 135.817 114.226C136.073 113.458 136.5 111.922 137.097 109.618C137.695 107.228 138.377 104.455 139.145 101.298C139.828 98.0551 140.553 94.6418 141.321 91.0578C142.175 87.4738 142.943 84.0605 143.625 80.8178C145.588 71.5165 147.167 64.2205 148.361 58.9298C149.556 53.5538 150.281 50.7805 150.537 50.6098C150.623 50.4391 150.793 50.3111 151.049 50.2258C151.391 50.1405 151.689 50.0978 151.945 50.0978C152.287 50.1831 152.543 50.3538 152.713 50.6098C152.884 50.8658 152.799 51.9325 152.457 53.8098C152.201 55.6871 151.647 58.6738 150.793 62.7698C150.025 66.7805 148.831 72.6258 147.209 80.3058C146.868 81.9271 146.527 83.5911 146.185 85.2978C145.844 86.9191 145.503 88.4551 145.161 89.9058C144.82 91.3565 144.521 92.6365 144.265 93.7458C144.009 94.8551 143.839 95.6658 143.753 96.1778C143.497 97.3725 143.284 98.3965 143.113 99.2498C142.943 100.018 142.9 100.444 142.985 100.53C143.071 100.53 143.241 100.359 143.497 100.018C143.753 99.6765 144.095 99.2498 144.521 98.7378C146.143 96.6045 147.721 95.4525 149.257 95.2818C150.793 95.1111 152.031 95.9645 152.969 97.8418C153.14 98.0125 153.311 98.5245 153.481 99.3778C153.737 100.146 153.951 100.999 154.121 101.938C154.804 104.412 155.487 106.204 156.169 107.314C156.937 108.338 157.961 108.978 159.241 109.234C160.009 109.404 161.119 109.276 162.569 108.85C164.02 108.423 165.385 107.868 166.665 107.186C167.263 106.844 168.073 106.375 169.097 105.778C170.121 105.095 171.231 104.37 172.425 103.602C173.62 102.834 174.815 102.023 176.009 101.17C177.204 100.231 178.313 99.3778 179.337 98.6098C180.788 97.4151 181.812 96.6471 182.409 96.3058C183.007 95.8791 183.519 95.7085 183.945 95.7938C184.628 95.8791 185.012 96.2631 185.097 96.9458C185.183 97.6285 184.841 98.3538 184.073 99.1218C183.391 99.8898 181.684 101.255 178.953 103.218C172.383 108.167 167.135 111.196 163.209 112.306C159.284 113.33 156.169 112.519 153.865 109.874C153.097 108.935 152.5 108.039 152.073 107.186C151.732 106.247 151.305 104.711 150.793 102.578C150.623 101.639 150.409 100.828 150.153 100.146C149.983 99.4631 149.812 99.0791 149.641 98.9938C149.471 98.8231 149.087 99.0365 148.489 99.6338C147.892 100.231 147.167 101.084 146.313 102.194C145.545 103.218 144.735 104.455 143.881 105.906C143.028 107.271 142.26 108.636 141.577 110.002C141.151 110.855 140.767 111.836 140.425 112.946C139.999 113.97 139.657 115.079 139.401 116.274C139.06 117.383 138.804 118.45 138.633 119.474C138.463 120.498 138.377 121.394 138.377 122.162C138.377 123.527 137.993 124.466 137.225 124.978C136.457 125.404 135.732 125.148 135.049 124.21Z"/>
-            <!-- Letter 'n' -->
-            <path fill="#ffffff" class="sig-letter sig-n" d="M181.883 113.586C181.371 113.159 181.585 109.148 182.523 101.554C182.779 99.5058 183.035 97.5005 183.291 95.5378C183.462 93.4898 183.59 92.0818 183.675 91.3138C183.846 90.2045 184.017 89.4365 184.187 89.0098C184.273 88.5831 184.443 88.2845 184.699 88.1138C185.126 87.8578 185.51 87.8578 185.851 88.1138C186.278 88.2845 186.577 88.6258 186.747 89.1378C186.918 89.5645 186.918 90.6311 186.747 92.3378C186.662 94.0445 186.534 95.6658 186.363 97.2018C186.193 97.7991 186.193 98.0125 186.363 97.8418C186.534 97.6711 186.918 96.9885 187.515 95.7938C188.283 94.2578 189.222 92.9351 190.331 91.8258C191.526 90.6311 192.465 90.0338 193.147 90.0338C193.83 90.0338 194.513 90.3751 195.195 91.0578C195.707 91.4845 196.134 92.0818 196.475 92.8498C196.817 93.5325 197.329 94.8978 198.011 96.9458C198.95 99.9325 199.718 102.108 200.315 103.474C200.913 104.839 201.553 105.735 202.235 106.162C202.662 106.418 202.961 106.546 203.131 106.546C203.387 106.546 203.729 106.418 204.155 106.162C204.667 105.82 205.521 104.839 206.715 103.218C207.995 101.511 209.233 99.7191 210.427 97.8418C211.025 96.9885 211.451 96.4338 211.707 96.1778C212.049 95.8365 212.433 95.6658 212.859 95.6658C213.371 95.6658 213.798 95.9645 214.139 96.5618C214.31 96.9885 214.353 97.3725 214.267 97.7138C214.267 98.0551 214.054 98.6098 213.627 99.3778C213.201 100.146 212.689 100.999 212.091 101.938C211.494 102.791 210.854 103.644 210.171 104.498C209.574 105.351 208.934 106.162 208.251 106.93C207.654 107.612 207.185 108.124 206.843 108.466C204.113 110.77 201.553 110.642 199.163 108.082C198.31 107.228 197.585 106.204 196.987 105.01C196.475 103.815 195.75 101.724 194.811 98.7378L193.275 93.6178L192.123 94.8978C190.758 96.6898 189.051 100.828 187.003 107.314C186.065 110.215 185.382 112.05 184.955 112.818C184.529 113.5 183.974 113.842 183.291 113.842C182.523 113.842 182.054 113.756 181.883 113.586Z"/>
-            <!-- Letter 'a' (second) -->
-            <path fill="#ffffff" class="sig-letter sig-a2" d="M242.24 96.0498C242.667 95.7938 243.179 95.7938 243.776 96.0498C244.374 96.2205 244.502 96.7751 244.16 97.7138C243.819 98.6525 243.094 99.9325 241.984 101.554C240.875 103.175 239.51 104.754 237.888 106.29C235.328 108.85 233.152 110.514 231.36 111.282C229.654 111.964 228.075 111.836 226.624 110.898C226.112 110.556 225.643 110.172 225.216 109.746C224.875 109.319 224.576 108.764 224.32 108.082C224.064 107.399 223.808 106.503 223.552 105.394C223.382 104.284 223.168 102.876 222.912 101.17C222.742 100.316 222.571 99.8898 222.4 99.8898C222.315 99.8898 222.059 100.188 221.632 100.786C221.206 101.383 220.694 102.108 220.096 102.962C218.646 105.18 217.366 106.588 216.256 107.186C215.232 107.698 214.166 107.484 213.056 106.546C212.63 106.119 212.374 105.735 212.288 105.394C212.118 104.967 211.99 104.114 211.904 102.834C211.734 100.188 212.075 97.6285 212.928 95.1538C213.696 92.5938 214.848 90.4605 216.384 88.7538C218.006 87.0471 219.627 86.4498 221.248 86.9618C222.87 87.3885 223.936 88.7965 224.448 91.1858C224.534 91.6125 224.662 92.0391 224.832 92.4658C225.003 92.8925 225.174 93.2338 225.344 93.4898C225.686 93.9165 225.899 94.5138 225.984 95.2818C226.07 96.0498 226.198 97.3725 226.368 99.2498C226.539 102.492 226.838 104.796 227.264 106.162C227.691 107.527 228.374 108.21 229.312 108.21C229.995 108.21 230.976 107.74 232.256 106.802C233.536 105.863 234.902 104.583 236.352 102.962C236.694 102.62 237.163 102.066 237.76 101.298C238.443 100.53 239.083 99.7618 239.68 98.9938C240.363 98.2258 240.918 97.5431 241.344 96.9458C241.856 96.3485 242.155 96.0498 242.24 96.0498ZM218.688 98.6098C219.371 97.5005 219.883 96.6471 220.224 96.0498C220.651 95.3671 220.95 94.8551 221.12 94.5138C221.376 94.0871 221.504 93.7458 221.504 93.4898C221.504 93.1485 221.462 92.7645 221.376 92.3378C220.95 90.2045 220.182 89.6071 219.072 90.5458C218.475 91.0578 217.835 91.9965 217.152 93.3618C216.555 94.6418 216.086 95.9645 215.744 97.3298C215.488 98.6098 215.318 99.9325 215.232 101.298C215.147 102.663 215.232 103.346 215.488 103.346C215.574 103.346 215.915 102.876 216.512 101.938C217.195 100.999 217.92 99.8898 218.688 98.6098Z"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <footer id="contact">
-    <div class="contact-form-container">
-      <div class="contact-form-wrapper">
-        <div class="contact-form-left">
-          <h2 class="contact-form-title">Contact Us</h2>
-          <p class="contact-form-intro">We'd love to hear from you! Let us know about your next great project, we can't wait to make magic!</p>
-          <form id="contact-form" class="contact-form">
-            <div class="form-row">
-              <label for="first-name" class="form-label">First Name:</label>
-              <input type="text" id="first-name" name="first_name" class="form-input" required>
-            </div>
-            <div class="form-row">
-              <label for="last-name" class="form-label">Last Name:</label>
-              <input type="text" id="last-name" name="last_name" class="form-input" required>
-            </div>
-            <div class="form-row form-row-wide">
-              <label for="email" class="form-label">Email:</label>
-              <input type="email" id="email" name="email" class="form-input" required>
-            </div>
-            <div class="form-row form-row-wide form-row-message">
-              <label for="message" class="form-label">Message:</label>
-              <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
-            </div>
-            <button type="submit" class="form-submit-btn">Send Message</button>
-            <div id="form-message" class="form-message"></div>
-          </form>
-        </div>
-        <div class="contact-form-right">
-          <h1 class="contact-form-tagline">where heritage comes to thrive</h1>
-        </div>
-      </div>
-    </div>
-    <div class="footer-container">
-      <div class="footer-left">
-        <img src="assets/images/Symbol.png" alt="BINDAAS Logo" class="footer-logo">
-        <div class="footer-social">
-          <a href="https://www.instagram.com/bindaas.branding/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://bindaasbranding.us14.list-manage.com/track/click?u=c747020a95e352f7276f40c7b&id=264d99cdf1&e=d0f2ffa1fe&i=5e515fe522" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.tiktok.com/@bindaasbranding" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-        </div>
-      </div>
-      <div class="footer-right">
-        <p>&copy;2024-2026 BINDAAS | <a href="/pages/privacy">Privacy Notice</a> | <a href="/pages/terms-of-use">Terms of Use</a> | <a href="mailto:info@bindaas.com">info@bindaasbranding.com</a></p>
-      </div>
-    </div>
-  </footer>
+  </section>
 
-  <!-- Page Transition Overlay -->
-  <div id="page-transition-overlay" class="page-transition-overlay">
-    <div class="page-transition-panel"></div>
-  </div>
-  
+  <!-- Portfolio Section -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="portfolio-container">
+      <div class="portfolio-header">
+        <h2 class="portfolio-title">Portfolio</h2>
+        <a href="/pages/portfolio.html" class="portfolio-link">
+          <span class="btn-fill"></span>
+          <span class="btn-text">
+            <span class="btn-label">LEARN MORE</span>
+            <span class="btn-label-hover">LEARN MORE</span>
+          </span>
+          <img src="/assets/icons/right-arrow-black.svg" alt="" class="footer-nav-arrow">
+        </a>
+      </div>
+      <div class="portfolio-grid">
+        <a href="/pages/case-studies/shared-planet" class="portfolio-item portfolio-item-1">
+          <img src="assets/images/shared-planet/2.jpg" alt="Shared Planet">
+          <span class="portfolio-item-label">Shared Planet</span>
+        </a>
+        <a href="/pages/case-studies/nawala" class="portfolio-item portfolio-item-2">
+          <img src="assets/images/nawala/nawala-header.png" alt="Nawala">
+          <span class="portfolio-item-label">Nawala</span>
+        </a>
+        <a href="#" class="portfolio-item portfolio-item-video portfolio-item-3" aria-label="Aavrani">
+          <video src="/api/proxy-media?fileId=1PpQlVhc1JSpJIEpQ33LTU621Do0gZOXJ&type=video" autoplay muted loop playsinline></video>
+          <span class="portfolio-item-label">Aavrani</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Full-width image block (before Let's Build Together) -->
+  <div class="fullwidth-image-block">
+    <img src="assets/images/260217 Bindaas Founder Shoot_AV_31.jpg" alt="">
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <div class="contact-content">
+        <h2 class="contact-title">Let's Build Together</h2>
+        <p class="contact-intro">We'd love to hear from you! Tell us about your next project and we'll take it from there.</p>
+        <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first_name" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <span class="btn-fill"></span>
+            <span class="btn-text">
+              <span class="btn-label">Send Message</span>
+              <span class="btn-label-hover">Send Message</span>
+            </span>
+          </button>
+          <div id="form-message" class="form-message"></div>
+        </form>
+      </div>
+      <div class="contact-side">
+        <div class="contact-image">
+          <img src="assets/images/260217 Bindaas Founder Shoot_AV_42.jpg" alt="Working together">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder - Loaded via includes.js -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/includes.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/contact-form.js"></script>
   
-  <!-- Page Transition Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const exploreButton = document.querySelector('.case-study-green');
-      const transitionOverlay = document.getElementById('page-transition-overlay');
-      const transitionPanel = transitionOverlay.querySelector('.page-transition-panel');
+      // Service accordion functionality
+      const serviceItems = document.querySelectorAll('.service-item');
       
-      // Function to trigger page transition animation
-      function triggerPageTransition(targetUrl) {
-        // Prevent body scroll during transition
-        document.body.style.overflow = 'hidden';
-        
-        // Activate overlay
-        transitionOverlay.classList.add('active');
-        
-        // Ensure overlay is on top and visible before animation
-        transitionOverlay.style.zIndex = '99999';
-        transitionOverlay.style.visibility = 'visible';
-        transitionOverlay.style.pointerEvents = 'all';
-        
-        // Animate panel sliding up from bottom
-        gsap.fromTo(transitionPanel, 
-          { y: '100%' },
-          {
-            y: '0%',
-            duration: 0.6,
-            ease: 'power3.inOut',
-            onComplete: () => {
-              // Ensure overlay stays visible during navigation
-              transitionOverlay.style.visibility = 'visible';
-              transitionOverlay.style.pointerEvents = 'all';
-              transitionOverlay.style.zIndex = '99999';
-              
-              // Add transition parameter to URL for exit animation
-              const transitionUrl = new URL(targetUrl, window.location.href);
-              transitionUrl.searchParams.set('fromTransition', 'true');
-              
-              // Navigate to target page after animation completes
-              window.location.href = transitionUrl.toString();
-            }
-          }
-        );
-      }
-      
-      // Apply transition to explore button
-      if (exploreButton && transitionOverlay) {
-        exploreButton.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetUrl = this.getAttribute('href');
-          triggerPageTransition(targetUrl);
-        });
-      }
-      
-      // Apply transition to Case Studies menu link
-      const caseStudiesMenuLink = document.querySelector('.menu-item[href="/case-studies"]');
-      if (caseStudiesMenuLink && transitionOverlay) {
-        caseStudiesMenuLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetUrl = this.getAttribute('href');
-          // Close menu first
-          document.body.classList.remove('menu-open');
-          const menuOverlay = document.getElementById('menuOverlay');
-          if (menuOverlay) {
-            menuOverlay.classList.remove('active');
-          }
-          // Trigger transition after brief delay for menu to close
-          setTimeout(() => {
-            triggerPageTransition(targetUrl);
-          }, 100);
-        });
-      }
-      
-      // Handle page load - if coming from transition, slide panel down to reveal
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('fromTransition') === 'true') {
-        // Ensure GSAP is loaded before proceeding
-        if (typeof gsap !== 'undefined') {
-          // Set panel to visible state (covering page) immediately
-          gsap.set(transitionPanel, { y: '0%', clearProps: 'none' });
-          transitionOverlay.classList.add('active');
-          transitionOverlay.style.visibility = 'visible';
-          transitionOverlay.style.pointerEvents = 'all';
-          transitionOverlay.style.zIndex = '99999';
-          document.body.style.overflow = 'hidden';
-          
-          // Small delay to ensure overlay is visible, then animate down
-          requestAnimationFrame(() => {
-            gsap.to(transitionPanel, {
-              y: '100%',
-              duration: 0.6,
-              ease: 'power3.inOut',
-              onComplete: () => {
-                transitionOverlay.classList.remove('active');
-                transitionOverlay.style.visibility = 'hidden';
-                transitionOverlay.style.pointerEvents = 'none';
-                
-                // Remove the injected style element that sets overflow: hidden (do this first)
-                const transitionStyleEl = document.getElementById('transition-overlay-styles');
-                if (transitionStyleEl) {
-                  transitionStyleEl.remove();
-                }
-                
-                // Properly clear overflow to restore scrolling - use multiple methods to ensure it works
-                document.body.style.removeProperty('overflow');
-                document.documentElement.style.removeProperty('overflow');
-                document.body.style.overflow = '';
-                document.documentElement.style.overflow = '';
-                
-                // Force reflow to ensure styles are applied
-                void document.body.offsetHeight;
-                
-                // Double-check overflow is cleared after a brief delay
-                setTimeout(() => {
-                  document.body.style.overflow = '';
-                  document.documentElement.style.overflow = '';
-                }, 50);
-                
-                // Handle hash anchor scrolling after transition completes
-                const hash = window.location.hash;
-                if (hash) {
-                  // Small delay to ensure page is fully rendered before scrolling
-                  setTimeout(() => {
-                    const targetElement = document.querySelector(hash);
-                    if (targetElement) {
-                      targetElement.scrollIntoView({ behavior: 'smooth' });
-                      // Clear hash from URL after scrolling completes
-                      setTimeout(() => {
-                        window.history.replaceState({}, document.title, window.location.pathname);
-                      }, 800);
-                    }
-                  }, 150);
-                } else {
-                  // Clean up URL parameter (no hash)
-                  window.history.replaceState({}, document.title, window.location.pathname);
-                }
-              }
-            });
-          });
-        }
-      } else {
-        // Handle hash anchor scrolling for direct navigation (not from transition)
-        const hash = window.location.hash;
-        if (hash) {
-          // Small delay to ensure page is fully rendered before scrolling
-          setTimeout(() => {
-            const targetElement = document.querySelector(hash);
-            if (targetElement) {
-              targetElement.scrollIntoView({ behavior: 'smooth' });
-              // Clear hash from URL after scrolling completes
-              setTimeout(() => {
-                window.history.replaceState({}, document.title, window.location.pathname);
-              }, 800);
-            }
-          }, 100);
-        }
-      }
-      
-      // Service tags accordion animation
-      const serviceWrappers = document.querySelectorAll('.service-tag-wrapper');
-      const updateTagState = (button, expanded) => {
-        if (!button) return;
-        const icon = button.querySelector('.service-tag-icon');
-        button.dataset.expanded = expanded ? 'true' : 'false';
-        gsap.to(button, {
-          scale: 1,
-          duration: 0.2,
-          ease: 'power2.out'
-        });
-        if (icon) {
-          gsap.to(icon, {
-            rotation: expanded ? 45 : 0,
-            duration: 0.3,
-            ease: 'power2.out'
-          });
-        }
-      };
-      
-      serviceWrappers.forEach(wrapper => {
-        const button = wrapper.querySelector('.service-tag');
-        const content = wrapper.querySelector('.service-tag-content');
-        if (!button || !content) return;
-        button.dataset.expanded = 'false';
-        
-        // Set initial state
-        gsap.set(content, { height: 0 });
-        
-        // Function to close the wrapper
-        const closeWrapper = () => {
-          if (!wrapper.classList.contains('active')) return;
-          
-          updateTagState(button, false);
-          const closeTL = gsap.timeline({
-            onComplete: () => {
-              wrapper.classList.remove('active');
-            }
-          });
-          // Animate border-radius and content collapse simultaneously
-          closeTL.to(button, {
-            borderRadius: '50px',
-            duration: 0.2,
-            ease: 'power2.out'
-          }, 0);
-          closeTL.to(content, {
-            height: 0,
-            duration: 0.2,
-            ease: 'power2.inOut'
-          }, 0);
-        };
-        
-        // Auto-close on mouseleave
-        let closeTimeout;
-        wrapper.addEventListener('mouseleave', () => {
-          if (wrapper.classList.contains('active')) {
-            closeTimeout = setTimeout(() => {
-              closeWrapper();
-            }, 200); // Small delay to prevent accidental closes
-          }
-        });
-        
-        // Cancel close if mouse re-enters
-        wrapper.addEventListener('mouseenter', () => {
-          if (closeTimeout) {
-            clearTimeout(closeTimeout);
-            closeTimeout = null;
-          }
-        });
+      serviceItems.forEach(item => {
+        const button = item.querySelector('.service-button');
+        const content = item.querySelector('.service-content');
+        const icon = item.querySelector('.service-icon');
         
         button.addEventListener('click', function() {
-          const isActive = wrapper.classList.contains('active');
+          const isActive = item.classList.contains('active');
           
-          // Close all other open wrappers first
-          serviceWrappers.forEach(otherWrapper => {
-            if (otherWrapper !== wrapper && otherWrapper.classList.contains('active')) {
-              const otherContent = otherWrapper.querySelector('.service-tag-content');
-              const otherButton = otherWrapper.querySelector('.service-tag');
-              updateTagState(otherButton, false);
-              // Create timeline to sync border-radius change with content collapse
-              const closeTL = gsap.timeline({
-                onComplete: () => {
-                  otherWrapper.classList.remove('active');
-                }
-              });
-              // Animate border-radius and content collapse simultaneously
-              closeTL.to(otherButton, {
-                borderRadius: '50px',
-                duration: 0.2,
-                ease: 'power2.out'
-              }, 0);
-              closeTL.to(otherContent, {
-                height: 0,
-                duration: 0.2,
-                ease: 'power2.inOut'
-              }, 0);
+          // Close all other items
+          serviceItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+              const otherContent = otherItem.querySelector('.service-content');
+              const otherIcon = otherItem.querySelector('.service-icon');
+              gsap.to(otherContent, { height: 0, duration: 0.3, ease: 'power2.inOut' });
+              if (otherIcon) otherIcon.textContent = '+';
             }
           });
           
           if (isActive) {
-            // Close this wrapper
-            closeWrapper();
+            item.classList.remove('active');
+            gsap.to(content, { height: 0, duration: 0.3, ease: 'power2.inOut' });
+            if (icon) icon.textContent = '+';
           } else {
-            // Cancel any pending close timeout
-            if (closeTimeout) {
-              clearTimeout(closeTimeout);
-              closeTimeout = null;
-            }
-            // Open this wrapper
-            wrapper.classList.add('active');
-            updateTagState(button, true);
-            // Get natural height
+            item.classList.add('active');
             gsap.set(content, { height: 'auto' });
             const naturalHeight = content.offsetHeight;
             gsap.set(content, { height: 0 });
-            
-            // Create timeline to sync border-radius change with content expansion
-            const openTL = gsap.timeline();
-            // Change border-radius instantly first
-            openTL.set(button, {
-              borderRadius: '25px 25px 0 0'
-            }, 0);
-            // Start content expansion immediately after (no delay needed since set is instant)
-            openTL.to(content, {
-              height: naturalHeight,
-              duration: 0.2,
-              ease: 'power2.inOut'
-            }, 0);
+            gsap.to(content, { height: naturalHeight, duration: 0.3, ease: 'power2.inOut' });
+            if (icon) icon.textContent = '−';
           }
         });
       });
-      
-      // Case Studies Videos - Click to unmute/mute + Play only when in view
-      // Helper function to setup video with mute toggle and visibility-based playback
-      function setupVideo(videoId, indicatorId) {
-        const video = document.getElementById(videoId);
-        const indicator = document.getElementById(indicatorId);
-        
-        if (video && indicator) {
-          const videoWrapper = video.closest('.case-studies-video-wrapper');
-          
-          // Click to mute/unmute
-          if (videoWrapper) {
-            videoWrapper.addEventListener('click', function() {
-              if (video.muted) {
-                video.muted = false;
-                indicator.classList.add('unmuted');
-              } else {
-                video.muted = true;
-                indicator.classList.remove('unmuted');
-              }
-            });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
-          
-          // Play only when video is in viewport (saves resources)
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                // Video is visible - play it
-                video.play().catch(err => {
-                  console.log('Video autoplay prevented:', err);
-                });
-              } else {
-                // Video is not visible - pause it
-                video.pause();
-              }
-            });
-          }, {
-            threshold: 0.5 // Trigger when 50% of video is visible
-          });
-          
-          observer.observe(video);
-        }
+        });
+      });
+
+      // Mobile menu functionality
+      const menuToggle = document.getElementById('menuToggle');
+      const menuClose = document.getElementById('menuClose');
+      const menuOverlay = document.getElementById('menuOverlay');
+      const menuItems = document.querySelectorAll('.menu-item');
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+          document.body.classList.add('menu-open');
+          menuOverlay.classList.add('active');
+        });
       }
-      
-      // Setup both videos
-      setupVideo('caseStudiesVideo', 'videoMuteIndicator');
-      setupVideo('caseStudiesVideo2', 'videoMuteIndicator2');
-    });
-    
-    // Fix for back-forward cache (bfcache) - animate overlay when restored from cache
-    window.addEventListener('pageshow', function(event) {
-      if (event.persisted) {
-        // Page was restored from bfcache (back/forward navigation)
-        const transitionOverlay = document.getElementById('page-transition-overlay');
-        const transitionPanel = transitionOverlay ? transitionOverlay.querySelector('.page-transition-panel') : null;
-        const transitionStyleEl = document.getElementById('transition-overlay-styles');
-        
-        if (transitionOverlay && transitionPanel && typeof gsap !== 'undefined') {
-          // Check if overlay was visible (stuck from previous navigation)
-          const isOverlayVisible = transitionOverlay.classList.contains('active') || 
-                                   getComputedStyle(transitionOverlay).visibility === 'visible';
-          
-          if (isOverlayVisible) {
-            // Animate the panel sliding down (same as normal transition)
-            transitionOverlay.style.visibility = 'visible';
-            transitionOverlay.style.pointerEvents = 'all';
-            transitionOverlay.style.zIndex = '99999';
-            
-            gsap.fromTo(transitionPanel, 
-              { y: '0%' },
-              {
-                y: '100%',
-                duration: 0.6,
-                ease: 'power3.inOut',
-                onComplete: () => {
-                  transitionOverlay.classList.remove('active');
-                  transitionOverlay.style.visibility = 'hidden';
-                  transitionOverlay.style.pointerEvents = 'none';
-                  transitionOverlay.style.zIndex = '';
-                  
-                  // Remove injected styles
-                  if (transitionStyleEl) {
-                    transitionStyleEl.remove();
-                  }
-                  
-                  // Restore scrolling
-                  document.body.style.overflow = '';
-                  document.documentElement.style.overflow = '';
-                }
-              }
-            );
-          } else {
-            // Overlay wasn't visible, just clean up
-            if (transitionStyleEl) transitionStyleEl.remove();
-            document.body.style.overflow = '';
-            document.documentElement.style.overflow = '';
+
+      if (menuClose) {
+        menuClose.addEventListener('click', () => {
+          document.body.classList.remove('menu-open');
+          menuOverlay.classList.remove('active');
+        });
+      }
+
+      menuItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+          const href = item.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            e.preventDefault();
+            document.body.classList.remove('menu-open');
+            menuOverlay.classList.remove('active');
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              setTimeout(() => {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 300);
+            }
           }
-        } else {
-          // Fallback: just hide everything if GSAP not available
-          if (transitionOverlay) {
-            transitionOverlay.classList.remove('active');
-            transitionOverlay.style.visibility = 'hidden';
-            transitionOverlay.style.pointerEvents = 'none';
-          }
-          if (transitionStyleEl) transitionStyleEl.remove();
-          document.body.style.overflow = '';
-          document.documentElement.style.overflow = '';
-        }
-        
-        // Clean URL parameter if present
-        const url = new URL(window.location.href);
-        if (url.searchParams.has('fromTransition')) {
-          url.searchParams.delete('fromTransition');
-          window.history.replaceState({}, document.title, url.pathname + url.hash);
-        }
+        });
+      });
+
+      // GSAP scroll animations
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero animations
+        gsap.from('.hero-tagline', {
+          opacity: 0,
+          y: 30,
+          duration: 1,
+          delay: 0.3
+        });
+
+        gsap.from('.hero-cta', {
+          opacity: 0,
+          y: 20,
+          duration: 0.8,
+          delay: 0.6
+        });
+
+        gsap.from('.hero-image', {
+          opacity: 0,
+          scale: 0.95,
+          duration: 1,
+          delay: 0.5,
+          stagger: 0.2
+        });
+
+        // Strategy section animations
+        gsap.from('.strategy-headline', {
+          scrollTrigger: {
+            trigger: '.strategy-section',
+            start: 'top 80%'
+          },
+          opacity: 0,
+          y: 40,
+          duration: 1
+        });
+
+        gsap.from('.strategy-subtext', {
+          scrollTrigger: {
+            trigger: '.strategy-section',
+            start: 'top 70%'
+          },
+          opacity: 0,
+          y: 30,
+          duration: 0.8
+        });
+
+        // Services animations
+        gsap.from('.services-heading', {
+          scrollTrigger: {
+            trigger: '.services-section',
+            start: 'top 80%'
+          },
+          opacity: 0,
+          y: 30,
+          duration: 0.8
+        });
+
+        gsap.from('.service-item', {
+          scrollTrigger: {
+            trigger: '.services-list',
+            start: 'top 80%'
+          },
+          opacity: 0,
+          y: 20,
+          duration: 0.6,
+          stagger: 0.1
+        });
+
+        // Portfolio animations
+        gsap.from('.portfolio-title', {
+          scrollTrigger: {
+            trigger: '.portfolio-section',
+            start: 'top 80%'
+          },
+          opacity: 0,
+          y: 30,
+          duration: 0.8
+        });
+
+        gsap.from('.portfolio-item', {
+          scrollTrigger: {
+            trigger: '.portfolio-grid',
+            start: 'top 80%'
+          },
+          opacity: 0,
+          y: 40,
+          duration: 0.8,
+          stagger: 0.15
+        });
+
+        // Contact animations
+        gsap.from('.contact-title', {
+          scrollTrigger: {
+            trigger: '.contact-section',
+            start: 'top 80%'
+          },
+          opacity: 0,
+          y: 30,
+          duration: 0.8
+        });
       }
     });
   </script>
