@@ -1825,6 +1825,28 @@ body.menu-open {
   .menu-item {
     font-size: 44px;
   }
+
+  /* Portfolio page – cases grid */
+  .portfolio-cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-cases-tagline {
+    padding: 60px 24px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .project-card-image {
+    height: 280px;
+  }
+
+  .project-card-info {
+    padding: 32px 24px;
+  }
 }
 
 /* Small Mobile */
