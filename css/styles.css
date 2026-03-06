@@ -2407,9 +2407,28 @@ body.menu-open {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Play triangle inside the ring */
+.av-overlay::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-44%, -50%) scale(0.85);
+  border-style: solid;
+  border-width: 10px 0 10px 17px;
+  border-color: transparent transparent transparent var(--color-cream);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .av-player.is-paused .av-overlay::after {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+}
+
+.av-player.is-paused .av-overlay::before {
+  opacity: 1;
+  transform: translate(-44%, -50%) scale(1);
 }
 
 /* Controls bar */
