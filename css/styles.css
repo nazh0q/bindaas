@@ -217,10 +217,10 @@ body {
 
 .menu-toggle span {
   display: block;
-  width: 100%;
+  width: 22px;
   height: 2px;
   background-color: var(--color-brown);
-  transition: all 0.3s ease;
+  transform-origin: center;
 }
 
 /* Menu Overlay */
@@ -233,13 +233,39 @@ body {
   background-color: var(--color-maroon);
   z-index: 1002;
   visibility: hidden;
-  opacity: 0;
-  transition: all 0.4s ease;
+  transform: translateY(-100%);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1),
+              visibility 0s linear 0.5s;
 }
 
 .menu-overlay.active {
   visibility: visible;
-  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1),
+              visibility 0s linear 0s;
+}
+
+/* Menu item entrance animations — start after overlay finishes sliding in */
+.menu-overlay .menu-item,
+.menu-overlay .menu-socials {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.menu-overlay.active .menu-item,
+.menu-overlay.active .menu-socials {
+  animation: menuItemIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.menu-overlay.active .menu-item:nth-child(1) { animation-delay: 0.52s; }
+.menu-overlay.active .menu-item:nth-child(2) { animation-delay: 0.60s; }
+.menu-overlay.active .menu-item:nth-child(3) { animation-delay: 0.68s; }
+.menu-overlay.active .menu-item:nth-child(4) { animation-delay: 0.76s; }
+.menu-overlay.active .menu-socials           { animation-delay: 0.86s; }
+
+@keyframes menuItemIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
 }
 
 .menu-content {
@@ -253,31 +279,63 @@ body {
 }
 
 .menu-close {
-  position: absolute;
-  top: 30px;
-  right: 30px;
+  position: fixed;
+  top: 15px;
+  right: 20px;
   width: 48px;
   height: 48px;
   background: transparent;
   border: none;
   cursor: pointer;
+  z-index: 1003;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  /* Fade in as overlay opens */
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.menu-overlay.active .menu-close {
+  opacity: 1;
+  transition: opacity 0.25s ease 0.4s;
 }
 
 .menu-close span {
-  position: absolute;
-  width: 24px;
+  display: block;
+  width: 22px;
   height: 2px;
   background-color: var(--color-white);
-  top: 50%;
-  left: 50%;
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1),
+              opacity 0.3s ease;
 }
 
-.menu-close span:first-child {
-  transform: translate(-50%, -50%) rotate(45deg);
+/* Bars → X once overlay is active */
+.menu-overlay.active .menu-close span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  transition-delay: 0.45s;
 }
 
-.menu-close span:last-child {
-  transform: translate(-50%, -50%) rotate(-45deg);
+.menu-overlay.active .menu-close span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+  transition-delay: 0.45s;
+}
+
+.menu-overlay.active .menu-close span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  transition-delay: 0.45s;
+}
+
+/* Tablet: match header padding */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu-close {
+    top: 20px;
+    right: 20px;
+  }
 }
 
 .menu-nav {
