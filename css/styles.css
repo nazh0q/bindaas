@@ -1176,6 +1176,14 @@ body.menu-open {
   color: var(--color-white);
 }
 
+.project-card--brown .project-card-info {
+  background-color: var(--color-coral);
+  color: var(--color-white);
+}
+.project-card--brown .project-card-link {
+  color: var(--color-white);
+}
+
 /* =========================================
    PAGE TAGLINE SECTION (shared: services, portfolio)
    ========================================= */
@@ -2352,6 +2360,141 @@ body.menu-open {
 
 .services-accordion-wrap--maroon {
   background-color: var(--color-maroon);
+}
+
+/* =========================================
+   AAVRANI — Custom Video Players
+   ========================================= */
+.aavrani-videos-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background-color: var(--color-brown);
+}
+
+.av-player {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-brown);
+}
+
+.av-player video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Full-frame click overlay */
+.av-overlay {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+
+/* Centred play ring — visible when paused */
+.av-overlay::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  width: 64px;
+  height: 64px;
+  border: 1.5px solid var(--color-cream);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.av-player.is-paused .av-overlay::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Controls bar */
+.av-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 20px 18px;
+  background: linear-gradient(transparent, rgba(35, 12, 15, 0.75));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.av-player:hover .av-controls,
+.av-player.is-paused .av-controls {
+  opacity: 1;
+}
+
+/* Buttons */
+.av-btn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  color: var(--color-cream);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.av-btn:hover {
+  opacity: 0.65;
+}
+
+.av-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Icon state toggling */
+.av-icon-pause                      { display: none; }
+.av-player.is-playing .av-icon-play  { display: none; }
+.av-player.is-playing .av-icon-pause { display: block; }
+
+.av-icon-mute                       { display: none; }
+.av-player.is-muted .av-icon-sound   { display: none; }
+.av-player.is-muted .av-icon-mute    { display: block; }
+
+/* Progress bar */
+.av-progress-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  cursor: pointer;
+}
+
+.av-progress-track {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 251, 247, 0.25);
+  border-radius: 1px;
+  position: relative;
+}
+
+.av-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--color-cream);
+  border-radius: 1px;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .aavrani-videos-section {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* The Numbers / stats section */
