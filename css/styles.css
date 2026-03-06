@@ -135,7 +135,9 @@ body {
 }
 
 .header-logo {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
 }
 
 .header-logo img {
@@ -153,7 +155,9 @@ body {
 }
 
 .nav-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
   position: relative;
   font-family: var(--font-primary);
   font-size: 16px;
@@ -200,9 +204,11 @@ body {
 .menu-toggle {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 48px;
+  height: 48px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -250,8 +256,8 @@ body {
   position: absolute;
   top: 30px;
   right: 30px;
-  width: 30px;
-  height: 30px;
+  width: 48px;
+  height: 48px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -312,6 +318,11 @@ body {
 }
 
 .menu-social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
   color: var(--color-white);
   font-size: 28px;
   transition: opacity 0.3s ease;
@@ -433,9 +444,10 @@ body.menu-open {
   align-self: flex-start;
   display: inline-flex;
   align-items: center;
+  min-height: 48px;
   position: relative;
   font-family: var(--font-primary);
-  font-size: clamp(13px, 1.6vw, 21px);
+  font-size: clamp(14px, 1.6vw, 21px);
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -848,6 +860,7 @@ body.menu-open {
 .portfolio-link {
   display: inline-flex;
   align-items: center;
+  min-height: 48px;
   position: relative;
   font-family: var(--font-primary);
   font-size: clamp(14px, 1.6vw, 22px);
@@ -1023,6 +1036,7 @@ body.menu-open {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 1px;
+  min-height: 48px;
 }
 
 .project-link-text {
@@ -1271,6 +1285,7 @@ body.menu-open {
 .form-submit {
   align-self: flex-start;
   display: inline-block;
+  min-height: 48px;
   position: relative;
   overflow: hidden;
   padding: 16px 36px;
@@ -1354,6 +1369,11 @@ body.menu-open {
   display: block;
 }
 
+.contact-image--centered img {
+  object-position: center center;
+  transform-origin: center center;
+}
+
 /* =========================================
    FOOTER
    ========================================= */
@@ -1395,6 +1415,7 @@ body.menu-open {
 
 .footer-email-input {
   flex: 1;
+  min-height: 48px;
   padding: 12px 16px;
   background-color: transparent;
   border: 1px solid var(--color-white);
@@ -1424,6 +1445,7 @@ body.menu-open {
 }
 
 .footer-subscribe-btn {
+  min-height: 48px;
   padding: 14px 28px;
   background-color: var(--color-white);
   border: 1px solid var(--color-white);
@@ -1474,6 +1496,11 @@ body.menu-open {
 }
 
 .footer-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
   color: var(--color-white);
   font-size: 24px;
   transition: opacity 0.3s ease;
@@ -1502,6 +1529,7 @@ body.menu-open {
 .footer-nav-link {
   display: inline-flex;
   align-items: center;
+  min-height: 48px;
   position: relative;
   font-family: var(--font-primary);
   font-size: 16px;
@@ -1840,7 +1868,7 @@ body.menu-open {
   }
 
   .footer-nav-link {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .footer-copyright {
@@ -1922,6 +1950,9 @@ body.menu-open {
 .legal-content a {
   color: var(--color-teal);
   text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
 }
 
 @media (max-width: 1024px) {
@@ -2419,8 +2450,8 @@ body.menu-open {
 }
 
 .cs-gallery-btn {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 1.5px solid var(--color-brown);
   background: transparent;
