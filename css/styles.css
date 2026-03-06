@@ -383,6 +383,7 @@ body {
   min-height: 48px;
   color: var(--color-white);
   font-size: 28px;
+  text-decoration: none;
   transition: opacity 0.3s ease;
 }
 
@@ -1569,6 +1570,7 @@ body.menu-open {
   min-height: 48px;
   color: var(--color-white);
   font-size: 24px;
+  text-decoration: none;
   transition: opacity 0.3s ease;
 }
 
